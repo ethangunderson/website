@@ -30,7 +30,7 @@ defmodule Website.RootLayout do
         <link rel="stylesheet" href="/css/site.css" />
       </head>
 
-      <body class="w-1/3 mx-auto text-lg">
+      <body class="w-full px-10 md:px-0 md:w-1/2 xl:w-1/3 mx-auto text-lg">
         <header class="flex flex-col space-y-3 mt-10">
           <nav class="w-full">
             <ul class="flex justify-end space-x-5 list-none underline">
