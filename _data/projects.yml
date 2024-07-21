@@ -1,0 +1,24 @@
+- active:
+  - name: Instrumenting Elixir Applications
+    link: https://www.instrumentingelixir.com/
+    description: |
+      A full day workshop on how to instrument Elixir applications using Telemetry and OpenTelemetry. We are in the process of writing a book with the same topic and name. It is currently in progress.
+- archived:
+  - name: Growing Software
+    link: https://podcasts.apple.com/be/podcast/growing-software/id1566244538
+    description: |
+      A podcast that I hosted with Darby Frey on various software and startup topics.
+  - name: Glean
+    description: |
+      A personal finance application. Similar to Mint or YNAB, but more flexible. I put this on pause when my second kid was born. Copilot is very close to what I was building anyways.
+  - name: Papers We Love Chicago
+    link: https://paperswelove.org/chapter/chicago/
+    description: |
+      The Chicago chapter of Papers We Love that I started in 2015. We would meet once a month to discuss a computer science paper. I handed this off to someone else in 2018.
+  - name: ChicagoDB
+    link: https://github.com/chicagodb/chicagodb.github.com
+    description: |
+      A user group that I started in 2010 with Ryan Briones to discuss databases. Each month we would read a database related whitepaper and then have a presentation on a database that was inspired by the paper.
+  - name: Gathers Us
+    description: |
+      A web application to quickly form groups of people. I built this to help organize the ChicagoDB user group. It gained some popularity in the Chicago area but never really took off because I didn't know what I was doing. I still think the market needs a tool like this.
