@@ -19,6 +19,12 @@ defmodule Website.MixProject do
     ]
   end
 
+  def aliases() do
+    [
+      build: ["tableau.build", "tailwind default --minify"]
+    ]
+  end
+
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
