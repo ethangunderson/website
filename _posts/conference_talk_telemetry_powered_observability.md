@@ -3,7 +3,7 @@ layout: Website.PostLayout
 title: "Conference Talk: Telemetry Powered Observability"
 date: 2022-05-11
 categories: post
-permalink: conference-talk-telemetry-powered-observability
+permalink: "/conference-talk-telemetry-powered-observability"
 ---
 
 <iframe async=true width="560" height="315" src="https://www.youtube.com/embed/eOD6H8U_0GE?si=tjl6qAyKZScG3G9h" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
