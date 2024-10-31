@@ -51,7 +51,7 @@ defmodule Website.RootLayout do
             <% end %>
           </div>
         </header>
-        <main class="prose prose-lg max-w-full mt-10">
+        <main class="prose prose-lg sm:my-0 pt-10">
           <%= render(@inner_content) %>
         </main>
         <footer class="space-y-10 border-t-2 my-10">
