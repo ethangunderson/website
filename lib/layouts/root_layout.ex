@@ -57,6 +57,7 @@ defmodule Website.RootLayout do
         <footer class="space-y-10 border-t-2 my-10">
           <ul class="list-none flex space-x-10 mt-10 underline">
             <li><a href="https://www.github.com/ethangunderson">github</a></li>
+            <li><a href="https://bsky.app/profile/ethangunderson.com">bluesky</a></li>
             <li><a href="https://www.linkedin.com/in/ethangunderson/">linkedin</a></li>
             <li><a href="mailto:ethan@ethangunderson.com">email</a></li>
           </ul>
