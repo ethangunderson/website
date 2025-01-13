@@ -4,17 +4,18 @@ title: "SLOs and SLAs are not Interchangeable Terms"
 date: 2024-10-30
 categories: post
 permalink: "/slos-and-slas-are-not-interchangeable-terms"
+description: "These two things are similar, but different. Let's learn the difference."
 ---
 
 I'm a self-proclaimed SLA/SLO cop. I’m passionate about using the correct terms. Misunderstanding these two terms can lead to serious issues in service operations. Let’s clarify the differences:
 
 * **Service Level Indicator (SLI):** A specific measurement of service performance, such as latency or error rates.
-	
+
 * **Service Level Objective (SLO):** A target for those measurements—what we aspire to achieve.
-	
+
 * **Service Level Agreement (SLA):** A formal contract that outlines expected service levels and penalties for non-compliance.
 
-#### Why This Matters 
+#### Why This Matters
 
 SLAs are **contracts**. If a service violates the terms of the SLA, there are consequences. Normally, someone owes someone money, in some form or another.
 
@@ -28,5 +29,3 @@ An SLA violation should be a significant event (and hopefully a rare event). How
 
 * **SLOs = Goals (mutable)**
 * **SLAs = Contracts (fixed)**
-
-

@@ -30,10 +30,11 @@ defmodule Website.RootLayout do
         <link rel="stylesheet" href="/css/site.css" />
       </head>
 
-      <body class="w-full px-10 md:px-0 md:w-1/2 xl:w-1/3 mx-auto text-lg">
-        <header class="flex flex-col space-y-3 mt-10">
-          <nav class="w-full">
-            <ul class="flex justify-end space-x-5 list-none underline">
+      <body class="w-full px-10 md:px-0 md:w-2/3 xl:w-1/3 mx-auto text-lg">
+        <header class="flex flex-col space-y-3 pt-5">
+          <nav class="w-full border-b flex justify-between mb-10 pb-5">
+            <h1>Ethan Gunderson</h1>
+            <ul class="flex justify-end space-x-5 list-none">
               <li><a href="/">about</a></li>
               <li><a href="/writing">writing</a></li>
               <li><a href="/projects">projects</a></li>
@@ -51,7 +52,7 @@ defmodule Website.RootLayout do
             <% end %>
           </div>
         </header>
-        <main class="prose prose-lg sm:my-0 pt-10">
+        <main class="prose prose-lg sm:my-0 pt-3">
           <%= render(@inner_content) %>
         </main>
         <footer class="space-y-10 border-t-2 my-10">
