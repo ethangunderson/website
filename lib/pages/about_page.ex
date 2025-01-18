@@ -2,17 +2,21 @@ defmodule Website.AboutPage do
   use Tableau.Page,
     layout: Website.PageLayout,
     permalink: "/",
-    title: "about"
+    title: "about",
+    hide_title: true
 
   use Phoenix.Component
 
   def template(assigns) do
     ~H"""
     <p>
-      Hi! I'm a software engineer residing in Minneapolis, MN. I currently work at Cars Commerce as a principal engineer. My professional interests lie in distributed systems, observability engineering, and software architecture. Those all sound more serious than they need to be.
+      Hey 👋🏻 I'm Ethan.
     </p>
     <p>
-      2017's 136784th World's Fittest Man.
+      I'm a software engineer living in Minneapolis, MN. I work at Cars Commerce as a principal software engineer. My professional interests lie in distributed systems, observability engineering, and software architecture. Those all sound more serious than they need to be.
+    </p>
+    <p>
+      2017's 136784th World's Fittest Man. BJJ white belt.
     </p>
     <p>
       Weird coffee person.
@@ -40,6 +44,9 @@ defmodule Website.AboutPage do
     <hr />
     <section>
       <h3 class="text-xl font-base mb-5">Interviews and talks</h3>
+      <p>
+        Want me to come on your podcast or speak at your event? <a href="mailto:ethan@ethangunderson.com">Get in touch</a>.
+      </p>
       <ul class="list-none pl-0">
         <%= for i <- @data["interviews"] do %>
           <li class="p-0">

@@ -30,7 +30,7 @@ defmodule Website.RootLayout do
         <link rel="stylesheet" href="/css/site.css" />
       </head>
 
-      <body class="w-full px-10 md:px-0 md:w-2/3 xl:w-1/3 mx-auto text-lg">
+      <body class="w-full px-10 md:px-0 w-1/2 mx-auto text-lg">
         <header class="flex flex-col space-y-3 pt-5">
           <nav class="w-full border-b flex justify-between mb-10 pb-5">
             <h1>Ethan Gunderson</h1>
@@ -38,12 +38,15 @@ defmodule Website.RootLayout do
               <li><a href="/">about</a></li>
               <li><a href="/writing">writing</a></li>
               <li><a href="/projects">projects</a></li>
+              <li><a href="/now">now</a></li>
             </ul>
           </nav>
           <div class="flex flex-col justify-start">
-            <h1 class="font-bold text-2xl">
-              <%= @page[:title] %>
-            </h1>
+            <%= if !@page[:hide_title] do %>
+              <h1 class="font-bold text-2xl">
+                <%= @page[:title] %>
+              </h1>
+            <% end %>
 
             <%= if @page[:date] do %>
               <time class="text-sm">
@@ -52,7 +55,7 @@ defmodule Website.RootLayout do
             <% end %>
           </div>
         </header>
-        <main class="prose prose-lg sm:my-0 pt-3">
+        <main class="prose prose-xl sm:my-0 pt3-">
           <%= render(@inner_content) %>
         </main>
         <footer class="space-y-10 border-t-2 my-10">

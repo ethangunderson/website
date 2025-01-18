@@ -25,7 +25,7 @@ defmodule Website.WritingPage do
       </article>
     </section>
     <hr />
-    <section class="max-w-2xl mx-auto mb-8">
+    <section class="max-w-2xl mb-8">
       <h3 class="text-xl font-base mb-5">writing</h3>
       <article :for={post <- @posts} class="mt-2 flex space-x-2">
         <time><%= post.date |> Calendar.strftime("%b %y") %></time>
