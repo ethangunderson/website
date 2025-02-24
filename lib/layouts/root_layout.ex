@@ -28,6 +28,7 @@ defmodule Website.RootLayout do
         </title>
 
         <link rel="stylesheet" href="/css/site.css" />
+        <script src="https://tinylytics.app/embed/qsUQPD1PyV36tTZ7CVZn.js" defer></script>
       </head>
 
       <body class="px-10 md:px-0 w-1/2 mx-auto text-lg">
