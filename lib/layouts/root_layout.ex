@@ -5,7 +5,7 @@ defmodule Website.RootLayout do
   def template(assigns) do
     ~H"""
     <!DOCTYPE html>
-    <html lang="en">
+    <html lang="en" class="text-gray-800">
       <head>
         <meta charset="utf-8" />
         <meta http_equiv="X-UA-Compatible" content="IE=edge" />
@@ -31,9 +31,9 @@ defmodule Website.RootLayout do
         <script src="https://tinylytics.app/embed/qsUQPD1PyV36tTZ7CVZn.js" defer></script>
       </head>
 
-      <body class="px-10 md:px-0 w-1/2 mx-auto text-lg">
-        <header class="flex flex-col space-y-3 pt-5">
-          <nav class="border-b flex justify-between mb-10 pb-5">
+      <body class="bg-[#e4e9e9] px-10 md:px-0 w-full sm:w-3/5 lg:w-2/5 mx-auto text-lg">
+        <header class="flex flex-col space-y-3 pt-20">
+          <nav class="flex justify-between mb-10 pb-5">
             <h1>Ethan Gunderson</h1>
             <ul class="flex justify-end space-x-5 list-none">
               <li><a href="/">about</a></li>
@@ -44,7 +44,7 @@ defmodule Website.RootLayout do
           </nav>
           <div class="flex flex-col justify-start">
             <%= if !@page[:hide_title] do %>
-              <h1 class="font-bold text-2xl">
+              <h1 class="font-bold text-2xl mb-10">
                 <%= @page[:title] %>
               </h1>
             <% end %>
@@ -59,21 +59,17 @@ defmodule Website.RootLayout do
         <main class="prose prose-xl sm:my-0 max-w-full">
           <%= render(@inner_content) %>
         </main>
-        <footer class="space-y-10 border-t-2 my-10">
-          <ul class="list-none flex space-x-10 mt-10 underline">
-            <li><a href="https://www.github.com/ethangunderson">github</a></li>
-            <li><a href="https://bsky.app/profile/ethangunderson.com">bluesky</a></li>
-            <li><a href="https://www.linkedin.com/in/ethangunderson/">linkedin</a></li>
-            <li><a href="mailto:ethan@ethangunderson.com">email</a></li>
+        <footer class="space-y-10 flex space-x-20 border-black border-t border-dashed my-10">
+          <ul class="list-none mt-10 ">
+            <li><a href="https://www.github.com/ethangunderson">Github</a></li>
+            <li><a href="https://bsky.app/profile/ethangunderson.com">Bluesky</a></li>
+            <li><a href="https://www.linkedin.com/in/ethangunderson/">LinkedIn</a></li>
+            <li><a href="mailto:ethan@ethangunderson.com">Email</a></li>
           </ul>
-          <div class="flex justify-between text-sm">
-            <p>
-              &copy; <%= Date.utc_today().year %> Ethan Gunderson
-            </p>
-            <p>
-              <a class="underline" href="/feed.xml">RSS</a>
-            </p>
-          </div>
+          <ul class="">
+            <li> &copy; Ethan Gunderson</li>
+            <li><a href="/feed.xml">RSS</a></li>
+          </ul>
         </footer>
       </body>
 

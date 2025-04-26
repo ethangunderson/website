@@ -2,7 +2,7 @@
 // https://tailwindcss.com/docs/configuration
 
 let plugin = require("tailwindcss/plugin");
-const defaultTheme = require('tailwindcss/defaultTheme')
+const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
   content: ["./js/**/*.js", "./lib/**/*.ex"],
@@ -11,6 +11,7 @@ module.exports = {
       typography: {
         DEFAULT: {
           css: {
+            hr: "dashed 1px",
             pre: false,
           },
         },
@@ -23,4 +24,3 @@ module.exports = {
     require("@tailwindcss/container-queries"),
   ],
 };
-

@@ -10,13 +10,18 @@ defmodule Website.AboutPage do
   def template(assigns) do
     ~H"""
     <p>
-      Hey 👋🏻 I'm Ethan.
+      Hey 👋🏻 <br>
+      I'm Ethan.
     </p>
     <p>
-      I'm a software engineer living in Minneapolis, MN. I work at Cars Commerce as a principal software engineer. My professional interests lie in distributed systems, observability engineering, and software architecture. Those all sound more serious than they need to be.
+      I'm a software engineer living in Minneapolis, MN. <br> I work at Cars Commerce as a principal software engineer.
     </p>
     <p>
-      2017's 136784th World's Fittest Man. BJJ white belt.
+      I like to build things that people find useful.
+    </p>
+    <p>
+      2017's 136784th World's Fittest Man.<br>
+      BJJ white belt.
     </p>
     <p>
       Weird coffee person.
@@ -24,7 +29,7 @@ defmodule Website.AboutPage do
     <p>
       Here to make friends. Send me an <a href="mailto:ethan@ethangunderson.com">email</a>.
     </p>
-    <hr />
+    <hr/>
     <section>
       <h3 class="text-xl font-base mb-5">Latest writing</h3>
       <% post = List.first(@posts) %>
@@ -41,7 +46,7 @@ defmodule Website.AboutPage do
         </span>
       </article>
     </section>
-    <hr />
+    <hr/>
     <section>
       <h3 class="text-xl font-base mb-5">Interviews and talks</h3>
       <p>
