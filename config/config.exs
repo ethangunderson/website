@@ -41,8 +41,8 @@ config :tableau, Tableau.SitemapExtension, enabled: true
 
 config :tableau, Tableau.RSSExtension,
   enabled: true,
-  title: "ethangunderson",
-  description: "My website"
+  title: "Ethan Gunderson",
+  description: "Writing about observability, Elixir, and building software."
 
 config :elixir, :time_zone_database, Tz.TimeZoneDatabase
 

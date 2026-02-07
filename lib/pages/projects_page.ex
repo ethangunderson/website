@@ -9,24 +9,18 @@ defmodule Website.ProjectsPage do
 
   def template(assigns) do
     ~H"""
-    <div class="space-y-20">
-      <div class="flex flex-col space-y-20">
-        <%= for type <- @data["projects"] do %>
-          <div :for={{status, projects} <- type}>
-            <h2 class="text-base"><%= status %></h2>
-            <div class="space-y-5">
-              <%= for {project, idx} <- Enum.with_index(projects) do %>
-              <div>
-                <.project_card project={project} />
-                <%= if idx < length(projects) - 1 do %>
-                  <hr class="border-black border-dashed">
-                <% end %>
-              </div>
-              <% end %>
-            </div>
+    <p class="mb-10">Things I've built, am building, or contributed to.</p>
+    <div class="space-y-16">
+      <%= for type <- @data["projects"] do %>
+        <div :for={{status, projects} <- type}>
+          <h2 class="text-2xl font-heading mb-6 capitalize"><%= status %></h2>
+          <div class="space-y-6">
+            <%= for project <- projects do %>
+              <.project_card project={project} active={status == "active"} />
+            <% end %>
           </div>
-        <% end %>
-      </div>
+        </div>
+      <% end %>
     </div>
     """
   end

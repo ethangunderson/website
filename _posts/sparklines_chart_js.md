@@ -4,6 +4,10 @@ title: Sparklines in Chart.js
 date: 2021-09-01
 categories: post
 permalink: "/sparklines-in-chartjs"
+description: "How to build sparkline charts with Chart.js — no extra libraries needed."
+tags:
+  - javascript
+  - frontend
 ---
 
 A sparkline is a small, simple chart that can be used to show trend information at a glance. There are normally no axes or tooltips, just a small line of data points. While building Glean, I wanted a quick way to show the user how their accounts are performing over time. Sparklines were perfect for this use case.

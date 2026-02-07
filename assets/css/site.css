@@ -2,6 +2,24 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+@layer base {
+  body {
+    font-family: "Inter", system-ui, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Playfair Display", serif;
+  }
+
+  a {
+    @apply text-accent transition-colors duration-150;
+  }
+
+  a:hover {
+    @apply text-accent-hover;
+  }
+}
+
 hr {
-    @apply border-black border-t border-dashed;
+  @apply border-border-warm border-t border-dashed;
 }

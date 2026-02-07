@@ -5,6 +5,9 @@ date: 2024-10-30
 categories: post
 permalink: "/slos-and-slas-are-not-interchangeable-terms"
 description: "These two things are similar, but different. Let's learn the difference."
+tags:
+  - observability
+  - sre
 ---
 
 I'm a self-proclaimed SLA/SLO cop. I’m passionate about using the correct terms. Misunderstanding these two terms can lead to serious issues in service operations. Let’s clarify the differences:

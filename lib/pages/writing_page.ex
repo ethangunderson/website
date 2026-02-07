@@ -8,15 +8,27 @@ defmodule Website.WritingPage do
 
   def template(assigns) do
     ~H"""
-    <section class="max-w-2xl mb-8">
-      <article :for={post <- @posts} class="mt-2 flex space-x-2">
-        <time><%= post.date |> Calendar.strftime("%b %y") %></time>
-        <a class="text-base flex" href={post.permalink}>
-          <h3 class="text-lg font-base m-0"><%= post.title %></h3>
-        </a>
-
-        <a class="no-underline text-base flex" href={post.permalink}></a>
-      </article>
+    <p class="mb-10">I write about observability, Elixir, and building software.</p>
+    <section class="space-y-12">
+      <% posts_by_year = Enum.group_by(@posts, & &1.date.year) %>
+      <%= for {year, posts} <- Enum.sort_by(posts_by_year, fn {year, _} -> year end, :desc) do %>
+        <div>
+          <h2 class="text-2xl font-heading mb-4"><%= year %></h2>
+          <div class="space-y-6">
+            <%= for post <- posts do %>
+              <article>
+                <div class="flex items-baseline gap-3">
+                  <a href={post.permalink} class="text-lg"><%= post.title %></a>
+                  <time class="text-sm text-muted whitespace-nowrap"><%= post.date |> Calendar.strftime("%b %d") %></time>
+                </div>
+                <%= if post[:description] do %>
+                  <p class="mt-1 text-base text-ink/70"><%= post.description %></p>
+                <% end %>
+              </article>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
     </section>
     """
   end
