@@ -26,3 +26,5 @@ tableau_new-*.tar
 /tmp/
 
 /_site/
+
+.serena/
