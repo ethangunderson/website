@@ -12,6 +12,10 @@ defmodule Website.RootLayout do
     end
   end
 
+  defp noise_texture do
+    Phoenix.HTML.raw(~s[<svg xmlns="http://www.w3.org/2000/svg" class="fixed inset-0 w-full h-full pointer-events-none" style="z-index: 9999; opacity: 0.3;" aria-hidden="true"><defs><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.75" numOctaves="4" stitchTiles="stitch"/></filter></defs><rect width="100%" height="100%" filter="url(#noise)"/></svg>])
+  end
+
   def template(assigns) do
     ~H"""
     <!DOCTYPE html>
@@ -52,6 +56,7 @@ defmodule Website.RootLayout do
       </head>
 
       <body class="bg-walnut px-10 md:px-0 w-full max-w-2xl mx-auto text-lg font-body">
+        <%= noise_texture() %>
         <header class="pt-20 mb-16">
           <nav class="flex justify-between items-baseline mb-10">
             <a href="/" class="no-underline hover:no-underline">
