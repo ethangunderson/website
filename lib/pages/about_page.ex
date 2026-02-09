@@ -36,7 +36,7 @@ defmodule Website.AboutPage do
         <h3 class="text-xl font-heading m-0 mb-1">Latest writing</h3>
         <article class="mt-2">
           <a href={post.permalink} class="text-lg"><%= post.title %></a>
-          <span class="text-sm text-muted ml-2"><%= post.date |> Calendar.strftime("%b %Y") %></span>
+          <span class="text-sm text-grille ml-2"><%= post.date |> Calendar.strftime("%b %Y") %></span>
           <p class="mt-1 text-base"><%= post.description %></p>
         </article>
       </div>
@@ -53,7 +53,7 @@ defmodule Website.AboutPage do
         <%= for i <- @data["interviews"] do %>
           <li>
             <a href={i["link"]}><%= i["name"] %></a>
-            <span class="text-sm text-muted">(<%= i["year"] %>)</span>
+            <span class="text-sm text-grille">(<%= i["year"] %>)</span>
           </li>
         <% end %>
       </ul>

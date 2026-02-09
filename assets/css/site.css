@@ -4,22 +4,62 @@
 
 @layer base {
   body {
-    font-family: "Inter", system-ui, sans-serif;
+    font-family: "Source Serif 4", Georgia, serif;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: "Playfair Display", serif;
+    font-family: "Space Grotesk", system-ui, sans-serif;
   }
 
   a {
-    @apply text-accent transition-colors duration-150;
+    @apply text-amber transition-all duration-150;
   }
 
   a:hover {
-    @apply text-accent-hover;
+    @apply text-copper;
+    text-shadow: 0 0 8px rgba(212, 136, 58, 0.3);
   }
 }
 
+/* Groove HRs — vinyl record lines */
 hr {
-  @apply border-border-warm border-t border-dashed;
+  border: none;
+  height: 3px;
+  background: linear-gradient(
+    to bottom,
+    transparent 0px,
+    #3d352e 0px,
+    #3d352e 1px,
+    transparent 1px,
+    transparent 2px,
+    #3d352e 2px,
+    #3d352e 3px
+  );
+}
+
+/* LED nav indicator for active items */
+.nav-led {
+  position: relative;
+}
+
+.nav-led-active::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -6px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #d4883a;
+  box-shadow: 0 0 6px rgba(212, 136, 58, 0.6);
+}
+
+/* Warm glow on card hover */
+.glow-hover {
+  transition: box-shadow 200ms ease;
+}
+
+.glow-hover:hover {
+  box-shadow: 0 0 12px rgba(212, 136, 58, 0.15);
 }

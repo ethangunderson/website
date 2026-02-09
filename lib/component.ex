@@ -3,7 +3,7 @@ defmodule Website.Component do
 
   def project_card(assigns) do
     ~H"""
-    <div class={if @active, do: "border-l-4 border-accent pl-4", else: "opacity-80"}>
+    <div class={["glow-hover rounded p-3 -ml-3", if(@active, do: "border-l-4 border-amber pl-4", else: "opacity-80")]}>
       <%= if @project["link"] do %>
         <a href={@project["link"]} class="text-lg"><%= @project["name"] %></a>
       <% else %>
@@ -16,7 +16,7 @@ defmodule Website.Component do
 
   def book_callout(assigns) do
     ~H"""
-    <div class="border-l-4 border-accent bg-white/50 p-6 my-6">
+    <div class="border-l-4 border-amber bg-surface p-6 my-6 rounded glow-hover">
       <h3 class="text-xl font-heading m-0 mb-2">
         <a href="https://www.instrumentingelixir.com/">Instrumenting Elixir Applications</a>
       </h3>

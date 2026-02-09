@@ -6,16 +6,16 @@ defmodule Website.RootLayout do
     permalink = page[:permalink] || ""
 
     if permalink == href do
-      "font-semibold underline underline-offset-4 decoration-accent"
+      "nav-led nav-led-active font-semibold text-parchment"
     else
-      "no-underline hover:underline hover:underline-offset-4 hover:decoration-border-warm"
+      "nav-led no-underline hover:text-copper"
     end
   end
 
   def template(assigns) do
     ~H"""
     <!DOCTYPE html>
-    <html lang="en" class="text-ink">
+    <html lang="en" class="text-parchment">
       <head>
         <meta charset="utf-8" />
         <meta http_equiv="X-UA-Compatible" content="IE=edge" />
@@ -45,20 +45,20 @@ defmodule Website.RootLayout do
 
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,500&display=swap" rel="stylesheet" />
 
         <link rel="stylesheet" href="/css/site.css" />
         <script src="https://tinylytics.app/embed/qsUQPD1PyV36tTZ7CVZn.js" defer></script>
       </head>
 
-      <body class="bg-cream px-10 md:px-0 w-full max-w-2xl mx-auto text-lg font-body">
+      <body class="bg-walnut px-10 md:px-0 w-full max-w-2xl mx-auto text-lg font-body">
         <header class="pt-20 mb-16">
           <nav class="flex justify-between items-baseline mb-10">
             <a href="/" class="no-underline hover:no-underline">
-              <h1 class="font-heading text-3xl text-ink">Ethan Gunderson</h1>
-              <p class="text-sm text-muted mt-1">Principal Engineer. Author. Builder.</p>
+              <h1 class="font-heading text-3xl text-parchment">Ethan Gunderson</h1>
+              <p class="text-sm text-grille mt-1 font-heading tracking-wide uppercase">Principal Engineer. Author. Builder.</p>
             </a>
-            <ul class="flex space-x-5 list-none text-base">
+            <ul class="flex space-x-5 list-none text-base font-heading">
               <li><a href="/" class={active_class(@page, "/")}>about</a></li>
               <li><a href="/writing" class={active_class(@page, "/writing")}>writing</a></li>
               <li><a href="/projects" class={active_class(@page, "/projects")}>projects</a></li>
@@ -74,7 +74,7 @@ defmodule Website.RootLayout do
             <% end %>
 
             <%= if @page[:date] do %>
-              <time class="text-sm text-muted">
+              <time class="text-sm text-grille font-mono">
                 <%= @page.date |> Calendar.strftime("%b %d %Y") %>
               </time>
             <% end %>
@@ -83,7 +83,7 @@ defmodule Website.RootLayout do
         <main class="prose prose-xl sm:my-0 max-w-full">
           <%= render(@inner_content) %>
         </main>
-        <footer class="border-border-warm border-t border-dashed mt-16 pt-10 pb-10">
+        <footer class="border-grain border-t mt-16 pt-10 pb-10" style="border-top: 3px double #3d352e;">
           <div class="flex justify-between">
             <ul class="list-none space-y-1 text-base">
               <li><a href="https://www.github.com/ethangunderson">Github</a></li>
@@ -92,7 +92,7 @@ defmodule Website.RootLayout do
               <li><a href="mailto:ethan@ethangunderson.com">Email</a></li>
             </ul>
             <div class="text-base text-right">
-              <p class="text-muted">&copy; Ethan Gunderson</p>
+              <p class="text-grille">&copy; Ethan Gunderson</p>
               <p><a href="/feed.xml">RSS</a></p>
             </div>
           </div>

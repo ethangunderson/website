@@ -19,10 +19,10 @@ defmodule Website.WritingPage do
               <article>
                 <div class="flex items-baseline gap-3">
                   <a href={post.permalink} class="text-lg"><%= post.title %></a>
-                  <time class="text-sm text-muted whitespace-nowrap"><%= post.date |> Calendar.strftime("%b %d") %></time>
+                  <time class="text-sm text-grille whitespace-nowrap"><%= post.date |> Calendar.strftime("%b %d") %></time>
                 </div>
                 <%= if post[:description] do %>
-                  <p class="mt-1 text-base text-ink/70"><%= post.description %></p>
+                  <p class="mt-1 text-base text-parchment/70"><%= post.description %></p>
                 <% end %>
               </article>
             <% end %>
