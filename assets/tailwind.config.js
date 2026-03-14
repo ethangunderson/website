@@ -9,15 +9,18 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        bg: "#f5f5f0",
-        sidebar: "#ffffff",
+        "site-bg": "#f5f5f0",
+        "sidebar-bg": "#ffffff",
         ink: "#111111",
-        "accent-red": "#e63000",
+        accent: "#e63000",
         "accent-blue": "#0047ff",
         muted: "#888888",
       },
       fontFamily: {
         sans: ['"Inter"', ...defaultTheme.fontFamily.sans],
+      },
+      gridTemplateColumns: {
+        layout: "280px 1fr",
       },
       typography: {
         DEFAULT: {
@@ -34,6 +37,7 @@ module.exports = {
             "--tw-prose-code": "#111111",
             "--tw-prose-pre-bg": "#1a1a1a",
             "--tw-prose-pre-code": "#f5f5f0",
+            maxWidth: "none",
             a: {
               color: "#111111",
               textDecoration: "underline",
@@ -52,9 +56,18 @@ module.exports = {
             },
             blockquote: {
               borderLeftColor: "#e63000",
+              borderLeftWidth: "4px",
               fontStyle: "normal",
               fontWeight: "500",
             },
+            code: {
+              backgroundColor: "#e8e8e3",
+              padding: "0.1em 0.3em",
+              fontSize: "0.9em",
+              borderRadius: "0",
+            },
+            "code::before": { content: '""' },
+            "code::after": { content: '""' },
           },
         },
       },

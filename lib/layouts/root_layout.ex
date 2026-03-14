@@ -3,13 +3,9 @@ defmodule Website.RootLayout do
   use Phoenix.Component
 
   defp active_class(page, href) do
-    permalink = page[:permalink] || ""
-
-    if permalink == href do
-      "nav-active"
-    else
-      ""
-    end
+    if (page[:permalink] || "") == href,
+      do: "border-accent text-accent",
+      else: "border-transparent"
   end
 
   def template(assigns) do
@@ -51,59 +47,92 @@ defmodule Website.RootLayout do
         <script src="https://tinylytics.app/embed/qsUQPD1PyV36tTZ7CVZn.js" defer></script>
       </head>
 
-      <body>
-        <div class="accent-bar"></div>
+      <body class="bg-site-bg text-ink font-sans text-[17px] leading-relaxed">
+        <%# Fixed 4px red-orange accent bar across the very top %>
+        <div class="fixed top-0 left-0 right-0 h-1 bg-accent z-50"></div>
 
-        <div class="site-wrapper">
-          <aside class="sidebar">
-            <div class="sidebar-name">
-              <a href="/">
-                <p class="site-name">Ethan<br />Gunderson</p>
-                <p class="site-tagline">Principal Engineer.<br />Author. Builder.</p>
+        <%# Two-column grid — stacks to single column on mobile %>
+        <div class="grid grid-cols-1 md:grid-cols-layout min-h-screen pt-1">
+
+          <%# Sidebar %>
+          <aside class="bg-sidebar-bg border-b-2 border-ink md:border-b-0 md:border-r-2 md:sticky md:top-1 md:h-[calc(100vh-4px)] p-6 md:p-10 flex flex-col overflow-y-auto">
+
+            <div class="mb-8">
+              <a href="/" class="no-underline hover:no-underline text-ink hover:text-ink block">
+                <p class="text-2xl font-extrabold uppercase leading-[1.05] tracking-tight mb-2">
+                  Ethan<br />Gunderson
+                </p>
+                <p class="text-[0.72rem] text-muted uppercase tracking-wider leading-snug">
+                  Principal Engineer.<br />Author. Builder.
+                </p>
               </a>
             </div>
 
-            <hr class="sidebar-divider" />
+            <div class="border-t-2 border-ink mb-6"></div>
 
-            <nav class="sidebar-nav">
-              <ul>
-                <li><a href="/" class={active_class(@page, "/")}>About</a></li>
-                <li><a href="/writing" class={active_class(@page, "/writing")}>Writing</a></li>
-                <li><a href="/projects" class={active_class(@page, "/projects")}>Projects</a></li>
-                <li><a href="/now" class={active_class(@page, "/now")}>Now</a></li>
-                <li><a href="/uses" class={active_class(@page, "/uses")}>Uses</a></li>
+            <nav>
+              <ul class="list-none p-0 m-0 flex flex-row flex-wrap gap-1 md:flex-col md:gap-0">
+                <li>
+                  <a href="/" class={["block py-2 px-3 text-[0.78rem] font-bold uppercase tracking-[0.09em] text-ink no-underline border-l-4 transition-colors duration-75 hover:border-accent hover:text-accent", active_class(@page, "/")]}>
+                    About
+                  </a>
+                </li>
+                <li>
+                  <a href="/writing" class={["block py-2 px-3 text-[0.78rem] font-bold uppercase tracking-[0.09em] text-ink no-underline border-l-4 transition-colors duration-75 hover:border-accent hover:text-accent", active_class(@page, "/writing")]}>
+                    Writing
+                  </a>
+                </li>
+                <li>
+                  <a href="/projects" class={["block py-2 px-3 text-[0.78rem] font-bold uppercase tracking-[0.09em] text-ink no-underline border-l-4 transition-colors duration-75 hover:border-accent hover:text-accent", active_class(@page, "/projects")]}>
+                    Projects
+                  </a>
+                </li>
+                <li>
+                  <a href="/now" class={["block py-2 px-3 text-[0.78rem] font-bold uppercase tracking-[0.09em] text-ink no-underline border-l-4 transition-colors duration-75 hover:border-accent hover:text-accent", active_class(@page, "/now")]}>
+                    Now
+                  </a>
+                </li>
+                <li>
+                  <a href="/uses" class={["block py-2 px-3 text-[0.78rem] font-bold uppercase tracking-[0.09em] text-ink no-underline border-l-4 transition-colors duration-75 hover:border-accent hover:text-accent", active_class(@page, "/uses")]}>
+                    Uses
+                  </a>
+                </li>
               </ul>
             </nav>
           </aside>
 
-          <div class="content-col">
-            <main class="content-main">
+          <%# Content column %>
+          <div class="flex flex-col p-6 md:px-16 md:py-12">
+            <main class="flex-1">
               <%= if !@page[:hide_title] do %>
-                <h1 class="page-title"><%= @page[:title] %></h1>
+                <h1 class="text-[2.25rem] font-extrabold uppercase tracking-tight leading-[1.1] mb-6 pb-4 border-b-2 border-ink">
+                  <%= @page[:title] %>
+                </h1>
               <% end %>
 
               <%= if @page[:date] do %>
-                <time class="post-date">
+                <time class="block text-[0.75rem] text-muted font-semibold uppercase tracking-[0.07em] mb-8">
                   <%= @page.date |> Calendar.strftime("%b %d %Y") %>
                 </time>
               <% end %>
 
-              <div class="prose">
+              <div class="prose text-base">
                 <%= render(@inner_content) %>
               </div>
             </main>
 
-            <footer class="site-footer">
-              <ul class="footer-links">
-                <li><a href="https://www.github.com/ethangunderson">Github</a></li>
-                <li><a href="https://bsky.app/profile/ethangunderson.com">Bluesky</a></li>
-                <li><a href="https://www.linkedin.com/in/ethangunderson/">LinkedIn</a></li>
-                <li><a href="mailto:ethan@ethangunderson.com">Email</a></li>
-                <li><a href="/feed.xml">RSS</a></li>
+            <footer class="border-t-2 border-ink mt-16 pt-8">
+              <ul class="list-none p-0 m-0 flex gap-6 flex-wrap mb-3">
+                <li><a href="https://www.github.com/ethangunderson" class="text-[0.78rem] font-bold uppercase tracking-[0.07em] no-underline text-ink hover:text-accent">Github</a></li>
+                <li><a href="https://bsky.app/profile/ethangunderson.com" class="text-[0.78rem] font-bold uppercase tracking-[0.07em] no-underline text-ink hover:text-accent">Bluesky</a></li>
+                <li><a href="https://www.linkedin.com/in/ethangunderson/" class="text-[0.78rem] font-bold uppercase tracking-[0.07em] no-underline text-ink hover:text-accent">LinkedIn</a></li>
+                <li><a href="mailto:ethan@ethangunderson.com" class="text-[0.78rem] font-bold uppercase tracking-[0.07em] no-underline text-ink hover:text-accent">Email</a></li>
+                <li><a href="/feed.xml" class="text-[0.78rem] font-bold uppercase tracking-[0.07em] no-underline text-ink hover:text-accent">RSS</a></li>
               </ul>
-              <p class="footer-meta">&copy; Ethan Gunderson</p>
+              <p class="text-[0.78rem] text-muted m-0">&copy; Ethan Gunderson</p>
             </footer>
           </div>
+
         </div>
       </body>
 
