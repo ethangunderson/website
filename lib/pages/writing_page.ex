@@ -10,7 +10,8 @@ defmodule Website.WritingPage do
     ~H"""
     <p class="mb-10">I write about observability, Elixir, and building software.</p>
     <section class="space-y-12">
-      <% posts_by_year = Enum.group_by(@posts, & &1.date.year) %>
+      <% writing_posts = Enum.filter(@posts, &(&1[:categories] == "post")) %>
+      <% posts_by_year = Enum.group_by(writing_posts, & &1.date.year) %>
       <%= for {year, posts} <- Enum.sort_by(posts_by_year, fn {year, _} -> year end, :desc) do %>
         <div>
           <h2 class="text-2xl font-heading mb-4"><%= year %></h2>

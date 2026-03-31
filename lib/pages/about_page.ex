@@ -31,7 +31,7 @@ defmodule Website.AboutPage do
     <section class="my-12">
       <h2 class="text-2xl font-heading mb-6">Currently</h2>
       <.book_callout />
-      <% post = List.first(@posts) %>
+      <% post = @posts |> Enum.filter(&(&1[:categories] == "post")) |> List.first() %>
       <div class="mt-8">
         <h3 class="text-xl font-heading m-0 mb-1">Latest writing</h3>
         <article class="mt-2">

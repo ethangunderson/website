@@ -3,8 +3,8 @@ import Config
 config :tableau, :reloader,
   patterns: [
     ~r"lib/.*.ex",
-    ~r"(_posts|_pages)/.*.md",
-    ~r"assets/.*.(css|js)",
+    ~r"(_posts|_pages|_media)/.*.md",
+    ~r"assets/.*.(css|js|.jpg)",
     ~r"lib/components/.*.ex"
   ]
 
@@ -35,14 +35,14 @@ config :tableau, :config,
   ]
 
 config :tableau, Tableau.PageExtension, enabled: true
-config :tableau, Tableau.PostExtension, enabled: true, future: true
+config :tableau, Tableau.PostExtension, enabled: true, future: true, dir: ["_posts", "_media"]
 config :tableau, Tableau.DataExtension, enabled: true
 config :tableau, Tableau.SitemapExtension, enabled: true
 
 config :tableau, Tableau.RSSExtension,
   enabled: true,
   title: "Ethan Gunderson",
-  description: "Writing about observability, Elixir, and building software."
+  description: "Writing, reviews, and other stuff by Ethan Gunderson, software engineer."
 
 config :elixir, :time_zone_database, Tz.TimeZoneDatabase
 

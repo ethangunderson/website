@@ -55,7 +55,7 @@ defmodule Website.RootLayout do
         <div class="grid grid-cols-1 md:grid-cols-layout min-h-screen pt-1">
 
           <%# Sidebar %>
-          <aside class="bg-sidebar-bg border-b-2 border-ink md:border-b-0 md:border-r-2 md:sticky md:top-1 md:h-[calc(100vh-4px)] p-6 md:p-10 flex flex-col overflow-y-auto">
+          <aside class="bg-sidebar-bg border-b-4 border-ink md:border-b-0 md:border-r-4 md:sticky md:top-1 md:h-[calc(100vh-4px)] p-6 md:p-10 flex flex-col overflow-y-auto">
 
             <div class="mb-8">
               <a href="/" class="no-underline hover:no-underline text-ink hover:text-ink block">
@@ -68,7 +68,7 @@ defmodule Website.RootLayout do
               </a>
             </div>
 
-            <div class="border-t-2 border-ink mb-6"></div>
+            <div class="border-t-4 border-ink mb-6"></div>
 
             <nav>
               <ul class="list-none p-0 m-0 flex flex-row flex-wrap gap-1 md:flex-col md:gap-0">
@@ -85,6 +85,11 @@ defmodule Website.RootLayout do
                 <li>
                   <a href="/projects" class={["block py-2 px-3 text-[0.78rem] font-bold uppercase tracking-[0.09em] text-ink no-underline border-l-4 transition-colors duration-75 hover:border-accent hover:text-accent", active_class(@page, "/projects")]}>
                     Projects
+                  </a>
+                </li>
+                <li>
+                  <a href="/media" class={["block py-2 px-3 text-[0.78rem] font-bold uppercase tracking-[0.09em] text-ink no-underline border-l-4 transition-colors duration-75 hover:border-accent hover:text-accent", active_class(@page, "/media")]}>
+                    Media
                   </a>
                 </li>
                 <li>
@@ -105,7 +110,7 @@ defmodule Website.RootLayout do
           <div class="flex flex-col p-6 md:px-16 md:py-12">
             <main class="flex-1">
               <%= if !@page[:hide_title] do %>
-                <h1 class="text-[2.25rem] font-extrabold uppercase tracking-tight leading-[1.1] mb-6 pb-4 border-b-2 border-ink">
+                <h1 class="text-[2.25rem] font-extrabold uppercase tracking-tight leading-[1.1] mb-6 pb-4 border-b-4 border-ink">
                   <%= @page[:title] %>
                 </h1>
               <% end %>
@@ -121,7 +126,7 @@ defmodule Website.RootLayout do
               </div>
             </main>
 
-            <footer class="border-t-2 border-ink mt-16 pt-8">
+            <footer class="border-t-4 border-ink mt-16 pt-8">
               <ul class="list-none p-0 m-0 flex gap-6 flex-wrap mb-3">
                 <li><a href="https://www.github.com/ethangunderson" class="text-[0.78rem] font-bold uppercase tracking-[0.07em] no-underline text-ink hover:text-accent">Github</a></li>
                 <li><a href="https://bsky.app/profile/ethangunderson.com" class="text-[0.78rem] font-bold uppercase tracking-[0.07em] no-underline text-ink hover:text-accent">Bluesky</a></li>
