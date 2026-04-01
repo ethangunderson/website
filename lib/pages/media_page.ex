@@ -29,7 +29,11 @@ defmodule Website.MediaPage do
           </div>
         </div>
       <% end %>
+
     </section>
+    <div class="pt-5">
+    Shoutout to <a href="https://www.jmduke.com/">Justin Duke</a> for the inspriation of this page.
+    </div>
     """
   end
 end

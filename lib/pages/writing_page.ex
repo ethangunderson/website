@@ -8,7 +8,6 @@ defmodule Website.WritingPage do
 
   def template(assigns) do
     ~H"""
-    <p class="mb-10">I write about observability, Elixir, and building software.</p>
     <section class="space-y-12">
       <% writing_posts = Enum.filter(@posts, &(&1[:categories] == "post")) %>
       <% posts_by_year = Enum.group_by(writing_posts, & &1.date.year) %>
