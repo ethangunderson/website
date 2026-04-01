@@ -23,14 +23,14 @@ defmodule Website.RootLayout do
         <%= if @page[:image] do %>
           <meta property="og:image" content={@page[:image]} />
         <% end %>
-        <meta property="og:description" content={@page[:description] || "Principal engineer, author, and builder. Writing about observability, Elixir, and building software."} />
-        <meta name="description" content={@page[:description] || "Principal engineer, author, and builder. Writing about observability, Elixir, and building software."} />
+        <meta property="og:description" content={@page[:description] || "Software engineer, author, and builder. Writing about observability, Elixir, and building software."} />
+        <meta name="description" content={@page[:description] || "Software engineer, author, and builder. Writing about observability, Elixir, and building software."} />
         <meta property="og:url" content={URI.merge(@site[:config].url, @page[:permalink])} />
         <meta name="twitter:card" content="summary" />
 
         <title>
           <%= if @page[:title] == "Ethan Gunderson" do %>
-            <%= "Ethan Gunderson — Principal Engineer, Author, Builder" %>
+            <%= "Ethan Gunderson — Software Engineer, Author, Builder" %>
           <% else %>
             <%= [@page[:title], "Ethan Gunderson"]
             |> Enum.filter(& &1)
@@ -63,7 +63,7 @@ defmodule Website.RootLayout do
                   Ethan<br />Gunderson
                 </p>
                 <p class="text-[0.72rem] text-muted uppercase tracking-wider leading-snug">
-                  Principal Engineer.<br />Author. Builder.
+                  Software Engineer.<br />Author. Builder.
                 </p>
               </a>
             </div>

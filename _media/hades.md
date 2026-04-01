@@ -9,5 +9,4 @@ date: 2026-02-10
 year: 2020
 permalink: /media/hades
 image: /images/media/hades.webp
-description: "A roguelike that figured out how to make repetition feel like narrative progress."
 ---

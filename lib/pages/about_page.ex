@@ -3,11 +3,10 @@ defmodule Website.AboutPage do
     layout: Website.PageLayout,
     permalink: "/",
     title: "Ethan Gunderson",
-    og_title: "Ethan Gunderson — Principal Engineer, Author, Builder",
+    og_title: "Ethan Gunderson — Software Engineer, Author, Builder",
     hide_title: true
 
   use Phoenix.Component
-  import Website.Component
 
   def template(assigns) do
     ~H"""
