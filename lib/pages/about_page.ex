@@ -29,22 +29,6 @@ defmodule Website.AboutPage do
     <hr />
 
     <section class="my-12">
-      <h2 class="text-2xl font-heading mb-6">Currently</h2>
-      <.book_callout />
-      <% post = @posts |> Enum.filter(&(&1[:categories] == "post")) |> List.first() %>
-      <div class="mt-8">
-        <h3 class="text-xl font-heading m-0 mb-1">Latest writing</h3>
-        <article class="mt-2">
-          <a href={post.permalink} class="text-lg"><%= post.title %></a>
-          <span class="text-sm text-grille ml-2"><%= post.date |> Calendar.strftime("%b %Y") %></span>
-          <p class="mt-1 text-base"><%= post.description %></p>
-        </article>
-      </div>
-    </section>
-
-    <hr />
-
-    <section class="my-12">
       <h2 class="text-2xl font-heading mb-6">Speaking & community</h2>
       <p>
         Want me to come on your podcast or speak at your event? <a href="mailto:ethan@ethangunderson.com">Get in touch</a>.
