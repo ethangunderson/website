@@ -1,0 +1,50 @@
+{
+  "1480 W Berwyn Ave, Chicago, IL 60640": {
+    "lat": 41.9781223,
+    "lng": -87.667975
+  },
+  "227 W Lake St, Chicago, IL 60606": {
+    "lat": 41.8856473,
+    "lng": -87.6342273
+  },
+  "2824 W Armitage Ave, Chicago, IL 60647": {
+    "lat": 41.9176983,
+    "lng": -87.6982577
+  },
+  "4000 Lyndale Ave S, Minneapolis, MN 55409": {
+    "lat": 44.9302409,
+    "lng": -93.2888324
+  },
+  "4300 Bryant Ave S, Minneapolis, MN 55409": {
+    "lat": 44.92485,
+    "lng": -93.2910734
+  },
+  "4733 N Kedzie Ave, Chicago, IL": {
+    "lat": 41.9677767,
+    "lng": -87.7081064
+  },
+  "5148 N Clark St, Chicago, IL 60640": {
+    "lat": 41.9758217,
+    "lng": -87.6686364
+  },
+  "53 W Jackson Blvd, Chicago, IL": {
+    "lat": 41.8775391,
+    "lng": -87.6295522
+  },
+  "550 Vandalia St, St Paul, MN 55114": {
+    "lat": 44.958313,
+    "lng": -93.190925
+  },
+  "601 W Jackson Blvd, Chicago, IL 60661": {
+    "lat": 41.8777347,
+    "lng": -87.6429588
+  },
+  "615 W Randolph St, Chicago, IL": {
+    "lat": 41.884215,
+    "lng": -87.6433917
+  },
+  "704 W 22nd St, Minneapolis, MN 55405": {
+    "lat": 44.9610487,
+    "lng": -93.2883952
+  }
+}
