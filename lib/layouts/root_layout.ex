@@ -45,6 +45,7 @@ defmodule Website.RootLayout do
 
         <link rel="stylesheet" href="/css/site.css" />
         <script src="https://tinylytics.app/embed/qsUQPD1PyV36tTZ7CVZn.js" defer></script>
+        <script src="https://peepmetrics.com/t.js" data-token="izRiEhBmlc9R0YIFUHqa9" async></script>
       </head>
 
       <body class="bg-site-bg text-ink font-sans text-[17px] leading-relaxed">
