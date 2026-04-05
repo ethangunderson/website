@@ -25,3 +25,37 @@
     @apply text-accent decoration-accent;
   }
 }
+
+[data-peepmetrics-cheers] .pm-cheers__icon {
+  margin-right: 0.25em;
+}
+
+[data-peepmetrics-cheers] {
+  position: relative;
+  display: inline-block;
+}
+
+[data-peepmetrics-cheers]::after {
+  content: "cheers this post";
+  position: absolute;
+  bottom: calc(100% + 6px);
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: #f5f5f0;
+  background: #111111;
+  padding: 0.25rem 0.5rem;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 75ms;
+  transition-delay: 0s;
+}
+
+[data-peepmetrics-cheers]:hover::after {
+  opacity: 1;
+  transition-delay: 1s;
+}
