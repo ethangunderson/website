@@ -3,7 +3,10 @@ defmodule Website.Component do
 
   def project_card(assigns) do
     ~H"""
-    <div class={["glow-hover rounded p-3 -ml-3", if(@active, do: "border-l-4 border-amber pl-4", else: "opacity-80")]}>
+    <div class={[
+      "glow-hover rounded p-3 -ml-3",
+      if(@active, do: "border-l-4 border-amber pl-4", else: "opacity-80")
+    ]}>
       <%= if @project["link"] do %>
         <a href={@project["link"]} class="text-lg"><%= @project["name"] %></a>
       <% else %>

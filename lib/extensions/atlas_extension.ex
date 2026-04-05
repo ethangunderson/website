@@ -86,7 +86,10 @@ defmodule Website.AtlasExtension do
             {Map.merge(place, %{"lat" => lat, "lng" => lng}), cache}
 
           :error ->
-            IO.warn("AtlasExtension: could not geocode \"#{address}\" — place will appear in list but not on map")
+            IO.warn(
+              "AtlasExtension: could not geocode \"#{address}\" — place will appear in list but not on map"
+            )
+
             {place, cache}
         end
     end

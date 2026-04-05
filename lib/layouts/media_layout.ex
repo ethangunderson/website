@@ -25,11 +25,17 @@ defmodule Website.MediaLayout do
 
       <div class="prose text-base">
         <%= {:safe, render(@inner_content)} %>
-        <span class="text-accent font-mono text-lg tracking-wider" aria-label={"#{@page[:rating]} out of 5 stars"}>
+        <span
+          class="text-accent font-mono text-lg tracking-wider"
+          aria-label={"#{@page[:rating]} out of 5 stars"}
+        >
           <%= stars(@page[:rating] || 0) %>
         </span>
-        <div data-peepmetrics-cheers></div>
-        <script src="https://peepmetrics.com/cheers.js" data-token="izRiEhBmlc9R0YIFUHqa9" async></script>
+        <div class="mt-3">
+          <div data-peepmetrics-cheers></div>
+          <script src="https://peepmetrics.com/cheers.js" data-token="izRiEhBmlc9R0YIFUHqa9" async>
+          </script>
+        </div>
       </div>
     </article>
     """

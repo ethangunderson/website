@@ -9,7 +9,8 @@ defmodule Website.MediaPage do
   def template(assigns) do
     ~H"""
     <section class="space-y-12 not-prose">
-      <% media_posts = @posts |> Enum.filter(&(&1[:categories] == "media")) |> Enum.sort_by(& &1.date, {:desc, Date}) %>
+      <% media_posts =
+        @posts |> Enum.filter(&(&1[:categories] == "media")) |> Enum.sort_by(& &1.date, {:desc, Date}) %>
       <% posts_by_year = Enum.group_by(media_posts, & &1.date.year) %>
       <%= for {year, posts} <- Enum.sort_by(posts_by_year, fn {year, _} -> year end, :desc) do %>
         <div>
@@ -29,10 +30,9 @@ defmodule Website.MediaPage do
           </div>
         </div>
       <% end %>
-
     </section>
     <div class="pt-5">
-    Shoutout to <a href="https://www.jmduke.com/">Justin Duke</a> for the inspriation of this page.
+      Shoutout to <a href="https://www.jmduke.com/">Justin Duke</a> for the inspriation of this page.
     </div>
     """
   end

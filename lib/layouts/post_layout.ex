@@ -6,7 +6,8 @@ defmodule Website.PostLayout do
     ~H"""
     <%= {:safe, render(@inner_content)} %>
     <div data-peepmetrics-cheers></div>
-    <script src="https://peepmetrics.com/cheers.js" data-token="izRiEhBmlc9R0YIFUHqa9" async></script>
+    <script src="https://peepmetrics.com/cheers.js" data-token="izRiEhBmlc9R0YIFUHqa9" async>
+    </script>
     """
   end
 end

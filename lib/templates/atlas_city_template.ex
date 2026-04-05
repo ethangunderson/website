@@ -35,7 +35,8 @@ defmodule Website.AtlasCityTemplate do
         <%= @city["country"] %> &mdash; <%= @city["region"] %>
       </p>
 
-      <div id="travel-map" style="height: 420px; width: 100%;" class="border-4 border-ink mb-10"></div>
+      <div id="travel-map" style="height: 420px; width: 100%;" class="border-4 border-ink mb-10">
+      </div>
 
       <div class="flex gap-2 flex-wrap mb-6">
         <button class="filter-btn" data-filter="all" data-active="true">All</button>
@@ -80,17 +81,29 @@ defmodule Website.AtlasCityTemplate do
 
             <div class="flex gap-4 flex-wrap text-[0.68rem] font-bold uppercase tracking-wider mt-2">
               <%= if place["website"] do %>
-                <a href={place["website"]} class="text-accent-blue hover:text-accent no-underline" onclick="event.stopPropagation()">
+                <a
+                  href={place["website"]}
+                  class="text-accent-blue hover:text-accent no-underline"
+                  onclick="event.stopPropagation()"
+                >
                   Website
                 </a>
               <% end %>
               <%= if place["google_maps"] do %>
-                <a href={place["google_maps"]} class="text-accent-blue hover:text-accent no-underline" onclick="event.stopPropagation()">
+                <a
+                  href={place["google_maps"]}
+                  class="text-accent-blue hover:text-accent no-underline"
+                  onclick="event.stopPropagation()"
+                >
                   Maps
                 </a>
               <% end %>
               <%= for source <- (place["discovered_via"] || []) do %>
-                <a href={source["url"]} class="text-muted hover:text-accent no-underline" onclick="event.stopPropagation()">
+                <a
+                  href={source["url"]}
+                  class="text-muted hover:text-accent no-underline"
+                  onclick="event.stopPropagation()"
+                >
                   via <%= source["label"] %>
                 </a>
               <% end %>
@@ -104,7 +117,8 @@ defmodule Website.AtlasCityTemplate do
       <%= Phoenix.HTML.raw(Jason.encode!(@city["places"])) %>
     </script>
 
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js">
+    </script>
 
     <script>
       (function () {

@@ -15,10 +15,13 @@ defmodule Website.AboutPage do
         Hey, I'm Ethan.
       </p>
       <p>
-        I'm a principal software engineer at <a href="https://cars.com">Cars Commerce</a> with twenty years of experience building software. I care about performance, observability, and shipping things that people find useful.
+        I'm a principal software engineer at <a href="https://cars.com">Cars Commerce</a>
+        with twenty years of experience building software. I care about performance, observability, and shipping things that people find useful.
       </p>
       <p>
-        I'm currently writing a book on instrumenting Elixir applications. Before that, I started <a href="https://github.com/chicagodb/chicagodb.github.com">ChicagoDB</a> and <a href="https://paperswelove.org/chapter/chicago/">Papers We Love Chicago</a>, hosted <a href="https://podcasts.apple.com/be/podcast/growing-software/id1566244538">a podcast</a>, and built a bunch of things that taught me a lot.
+        I'm currently writing a book on instrumenting Elixir applications. Before that, I started
+        <a href="https://github.com/chicagodb/chicagodb.github.com">ChicagoDB</a>
+        and <a href="https://paperswelove.org/chapter/chicago/">Papers We Love Chicago</a>, hosted <a href="https://podcasts.apple.com/be/podcast/growing-software/id1566244538">a podcast</a>, and built a bunch of things that taught me a lot.
       </p>
       <p>
         Off the clock I'm a dad to two boys, an avid cook, and a BJJ white belt. I enjoy coffee too much, have a thing for stationery and well-made objects, and was once 2017's 136,784th World's Fittest Man. I'll make you watch The Bear and The West Wing if you let me.
@@ -48,8 +51,8 @@ defmodule Website.AboutPage do
       <h2 class="text-2xl font-heading mb-4">Let's connect</h2>
       <p>
         I'm always up for a conversation about Elixir, observability, or whatever you're building.
-        Send me an <a href="mailto:ethan@ethangunderson.com">email</a> or find me on
-        <a href="https://bsky.app/profile/ethangunderson.com">Bluesky</a>.
+        Send me an <a href="mailto:ethan@ethangunderson.com">email</a>
+        or find me on <a href="https://bsky.app/profile/ethangunderson.com">Bluesky</a>.
       </p>
     </section>
     """
