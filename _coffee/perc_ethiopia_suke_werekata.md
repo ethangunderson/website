@@ -8,7 +8,7 @@ rating: 2
 date: 2026-02-27
 link: https://perccoffee.com/products/ethiopia-suke-werekata
 permalink: /coffee/ethiopia-suke-werekata
-image: images/coffee/PERC_EthiopiaSukeWerekata.webp
+image: /images/coffee/PERC_EthiopiaSukeWerekata.webp
 process: 72 Hour Anaerobic Natural
 region: Ethiopia
 roast_level: Light
