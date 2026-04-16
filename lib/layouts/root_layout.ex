@@ -66,11 +66,11 @@ defmodule Website.RootLayout do
       </head>
 
       <body class="bg-site-bg text-ink font-sans text-[17px] leading-relaxed">
-        
+
         <div class="fixed top-0 left-0 right-0 h-1 bg-accent z-50"></div>
 
         <div class="grid grid-cols-1 md:grid-cols-layout min-h-screen pt-1">
-          
+
           <aside class="bg-sidebar-bg border-b-4 border-ink md:border-b-0 md:border-r-4 md:sticky md:top-1 md:h-[calc(100vh-4px)] p-6 md:p-10 flex flex-col overflow-y-auto">
             <div class="mb-8">
               <a href="/" class="no-underline hover:no-underline text-ink hover:text-ink block">
@@ -129,6 +129,17 @@ defmodule Website.RootLayout do
                     ]}
                   >
                     Media
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/coffee"
+                    class={[
+                      "block py-2 px-3 text-[0.78rem] font-bold uppercase tracking-[0.09em] text-ink no-underline border-l-4 transition-colors duration-75 hover:border-accent hover:text-accent",
+                      active_class(@page, "/coffee")
+                    ]}
+                  >
+                    Coffee
                   </a>
                 </li>
                 <li>

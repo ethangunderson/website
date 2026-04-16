@@ -4,6 +4,7 @@ config :tableau, :reloader,
   patterns: [
     ~r"lib/.*.ex",
     ~r"(_posts|_pages|_media)/.*.md",
+    ~r"(_posts|_pages|_coffee)/.*.md",
     ~r"assets/.*.(css|js|.jpg)",
     ~r"lib/components/.*.ex",
     ~r"_atlas/.*.md"
@@ -36,7 +37,7 @@ config :tableau, :config,
   ]
 
 config :tableau, Tableau.PageExtension, enabled: true
-config :tableau, Tableau.PostExtension, enabled: true, future: true, dir: ["_posts", "_media"]
+config :tableau, Tableau.PostExtension, enabled: true, future: true, dir: ["_posts", "_media", "_coffee"]
 config :tableau, Tableau.DataExtension, enabled: true
 config :tableau, Tableau.SitemapExtension, enabled: true
 config :tableau, Website.AtlasExtension, enabled: true
