@@ -1,5 +1,3 @@
-colombia-diego-bermudez-castillo
-
 ---
 layout: Website.CoffeeLayout
 title: "Colombia Diego Bermudez Castillo M-03"

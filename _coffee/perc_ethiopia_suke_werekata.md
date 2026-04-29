@@ -1,4 +1,3 @@
-o
 ---
 layout: Website.CoffeeLayout
 title: "Ethiopia Suke Werekata"
