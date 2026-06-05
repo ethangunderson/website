@@ -1,0 +1,16 @@
+---
+layout: Website.CoffeeLayout
+title: "Super Power Plum"
+categories: coffee
+roaster: "PERC Coffee"
+rating: 3
+date: 2026-05-15
+link: https://perccoffee.com/products/super-power-plum
+permalink: /coffee/perc-super-power-plum
+image: /images/coffee/PERC_SuperPowerPlum.webp
+process: Adv Washed P-02
+region: Columbia
+roast_level: Light-Medium
+---
+
+I really wanted to like this coffee, but at the end of the day it was pretty mediocre. Not bad, not great, at times a hint of that plumb action inferred by the name, but those moments were fleeting for me.
