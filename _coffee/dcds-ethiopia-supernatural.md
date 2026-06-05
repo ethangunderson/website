@@ -9,7 +9,7 @@ link: https://www.drinktrade.com/products/ethiopia-yirgacheffe-banko-chelchele-s
 permalink: /coffee/dcds-ethiopia-supernatural
 image: /images/coffee/DRI_Supernatural_Main.webp
 process: Natural/Dry Processed
-region: Colombia
+region: Ethiopia
 roast_level: Light-Medium
 ---
 

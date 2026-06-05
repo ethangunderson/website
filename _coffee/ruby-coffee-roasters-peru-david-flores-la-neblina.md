@@ -7,7 +7,7 @@ rating: 2
 date: 2026-05-15
 link: https://rubycoffeeroasters.com/collections/coffee/products/peru-david-flores-la-neblina
 permalink: /coffee/ruby-coffee-roasters-peru-david-flores-la-neblina
-image: /images/coffee/Ruby_PeruDavidFloresLaNeblina.png
+image: /images/coffee/Ruby_PeruDavidFloresLaNeblina.webp
 process: Washed
 region: Peru
 roast_level: Light

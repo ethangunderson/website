@@ -9,7 +9,7 @@ link: https://perccoffee.com/products/super-power-plum
 permalink: /coffee/perc-super-power-plum
 image: /images/coffee/PERC_SuperPowerPlum.webp
 process: Adv Washed P-02
-region: Columbia
+region: Colombia
 roast_level: Light-Medium
 ---
 

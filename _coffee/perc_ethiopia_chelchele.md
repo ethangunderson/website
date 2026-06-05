@@ -9,7 +9,7 @@ link: https://perccoffee.com/products/ethiopia-chelchele
 permalink: /coffee/perc-ethiopia-chelchele
 image: /images/coffee/PERC_EthiopiaChelchele_2025.webp
 process: Anaerobic Natural Process
-region: Colombia
+region: Ethiopia
 roast_level: Light
 ---
 

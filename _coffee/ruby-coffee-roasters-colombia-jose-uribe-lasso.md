@@ -7,7 +7,7 @@ rating: 3
 date: 2026-05-15
 link: https://rubycoffeeroasters.com/collections/coffee/products/colombia-jose-uribe-lasso
 permalink: /coffee/ruby-coffee-roasters-colombia-jose-uribe-lasso
-image: /images/coffee/Ruby_ColombiaJoseUribeLasso.png
+image: /images/coffee/Ruby_ColombiaJoseUribeLasso.webp
 process: Anaerobic Fermentation Washed
 region: Colombia
 roast_level: Medium-Light

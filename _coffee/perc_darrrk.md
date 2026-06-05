@@ -8,7 +8,7 @@ date: 2026-06-05
 link: https://perccoffee.com/products/darrrk
 permalink: /coffee/perc-darrrk
 image: /images/coffee/PERC_Darrrk.webp
-process: Natrual
+process: Natural
 region: Ethiopia
 roast_level: Darrrk
 ---
