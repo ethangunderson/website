@@ -98,15 +98,29 @@ defmodule Website.RootLayout do
                     About
                   </a>
                 </li>
-                <li>
+                <%!-- <li>
                   <a
-                    href="/writing"
+                    href="/book"
                     class={[
-                      "block py-2 px-3 text-[0.78rem] font-bold uppercase tracking-[0.09em] text-ink no-underline border-l-4 transition-colors duration-75 hover:border-accent hover:text-accent",
-                      active_class(@page, "/writing")
+                      "block py-2 px-3 text-[0.78rem] font-bold uppercase tracking-[0.09em] no-underline border-l-4 transition-colors duration-75 hover:border-accent hover:text-accent",
+                      if(active_class(@page, "/book") == "border-accent text-accent",
+                        do: "border-accent text-accent",
+                        else: "border-transparent text-accent opacity-70"
+                      )
                     ]}
                   >
-                    Writing
+                    Book
+                  </a>
+                </li> --%>
+                <li>
+                  <a
+                    href="/notes"
+                    class={[
+                      "block py-2 px-3 text-[0.78rem] font-bold uppercase tracking-[0.09em] text-ink no-underline border-l-4 transition-colors duration-75 hover:border-accent hover:text-accent",
+                      active_class(@page, "/notes")
+                    ]}
+                  >
+                    Notes
                   </a>
                 </li>
                 <li>
@@ -172,7 +186,11 @@ defmodule Website.RootLayout do
             <main class="flex-1">
               <%= if !@page[:hide_title] do %>
                 <h1 class="text-[2.25rem] font-extrabold uppercase tracking-tight leading-[1.1] mb-6 pb-4 border-b-4 border-ink">
-                  <%= @page[:title] %>
+                  <%= if @page[:link_url] do %>
+                    <a href={@page[:link_url]} class="no-underline hover:text-accent"><%= @page[:title] %> ↗</a>
+                  <% else %>
+                    <%= @page[:title] %>
+                  <% end %>
                 </h1>
               <% end %>
 

@@ -40,6 +40,7 @@ defmodule Website.AboutPage do
       <ul class="list-none pl-0 space-y-3">
         <%= for post <- activity do %>
           <% {type_label, type_color} = cond do
+            post[:categories] == "post" && "link" in (post[:tags] || []) -> {"link", "bg-muted text-site-bg"}
             post[:categories] == "post" -> {"writing", "bg-accent text-site-bg"}
             post[:categories] == "coffee" -> {"coffee", "bg-accent-blue text-site-bg"}
             post[:type] -> {post[:type], "bg-accent-blue text-site-bg"}

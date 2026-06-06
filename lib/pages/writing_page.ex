@@ -1,8 +1,8 @@
 defmodule Website.WritingPage do
   use Tableau.Page,
     layout: Website.PageLayout,
-    permalink: "/writing",
-    title: "Writing"
+    permalink: "/notes",
+    title: "Notes"
 
   use Phoenix.Component
 
@@ -18,7 +18,9 @@ defmodule Website.WritingPage do
             <%= for post <- posts do %>
               <article>
                 <div class="flex items-baseline gap-3">
-                  <a href={post.permalink} class="text-lg"><%= post.title %></a>
+                  <a href={post.permalink} class="text-lg">
+                    <%= post.title %><%= if "link" in (post[:tags] || []), do: " ↗", else: "" %>
+                  </a>
                   <time class="text-sm text-grille whitespace-nowrap">
                     <%= post.date |> Calendar.strftime("%b %d") %>
                   </time>
