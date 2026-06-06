@@ -31,6 +31,49 @@ defmodule Website.AboutPage do
     <hr />
 
     <section class="my-12">
+      <% activity =
+        @posts
+        |> Enum.filter(&(&1[:categories] in ["post", "coffee", "media"]))
+        |> Enum.sort_by(& &1.date, {:desc, Date})
+        |> Enum.take(15) %>
+      <h2 class="text-2xl font-heading mb-6">Recent activity</h2>
+      <ul class="list-none pl-0 space-y-3">
+        <%= for post <- activity do %>
+          <% {type_label, type_color} = cond do
+            post[:categories] == "post" -> {"writing", "bg-accent text-site-bg"}
+            post[:categories] == "coffee" -> {"coffee", "bg-accent-blue text-site-bg"}
+            post[:type] -> {post[:type], "bg-accent-blue text-site-bg"}
+            true -> {"media", "bg-accent-blue text-site-bg"}
+          end %>
+          <% context = cond do
+            post[:categories] == "coffee" && post[:roaster] -> post[:roaster]
+            post[:categories] == "media" && post[:creator] -> post[:creator]
+            true -> nil
+          end %>
+          <li class="flex items-baseline gap-3 text-sm">
+            <time class="text-grille whitespace-nowrap w-12 shrink-0">
+              <%= post.date |> Calendar.strftime("%b %d") %>
+            </time>
+            <span class={"#{type_color} text-xs font-heading uppercase px-2 py-1 shrink-0 leading-none"}>
+              <%= type_label %>
+            </span>
+            <span>
+              <a href={post.permalink}><%= post.title %></a>
+              <%= if context do %>
+                <span class="text-grille"> — <%= context %></span>
+              <% end %>
+              <%= if post[:rating] do %>
+                <span class="text-grille text-xs ml-1"><%= String.duplicate("★", post[:rating]) %></span>
+              <% end %>
+            </span>
+          </li>
+        <% end %>
+      </ul>
+    </section>
+
+    <hr />
+
+    <section class="my-12">
       <h2 class="text-2xl font-heading mb-6">Speaking & community</h2>
       <p>
         Want me to come on your podcast or speak at your event? <a href="mailto:ethan@ethangunderson.com">Get in touch</a>.

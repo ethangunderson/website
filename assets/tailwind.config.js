@@ -13,7 +13,7 @@ module.exports = {
         "sidebar-bg": "#ffffff",
         ink: "#111111",
         accent: "#e63000",
-        "accent-blue": "#0047ff",
+        "accent-blue": "#4682b4",
         muted: "#888888",
       },
       fontFamily: {
