@@ -15,7 +15,7 @@ defmodule Website.WritingPage do
         <div>
           <h2 class="text-2xl font-heading mb-4"><%= year %></h2>
           <div class="space-y-6">
-            <%= for post <- posts do %>
+            <%= for post <- Enum.sort_by(posts, & &1.date, {:desc, NaiveDateTime}) do %>
               <article>
                 <div class="flex items-baseline gap-3">
                   <a href={post.permalink} class="text-lg">

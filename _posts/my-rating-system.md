@@ -1,7 +1,7 @@
 ---
 layout: Website.PostLayout
 title: "My Rating System"
-date: 2026-06-06
+date: 2026-06-06 18:00:00
 categories: post
 permalink: "/my-rating-system"
 tags:
