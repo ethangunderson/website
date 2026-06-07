@@ -3,7 +3,7 @@ layout: Website.CoffeeLayout
 title: "Ethiopia Chelchele"
 categories: coffee
 roaster: "PERC Coffee"
-rating: 4
+rating: 5
 date: 2026-03-15
 link: https://perccoffee.com/products/ethiopia-chelchele
 permalink: /coffee/perc-ethiopia-chelchele

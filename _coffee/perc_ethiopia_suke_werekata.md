@@ -3,7 +3,7 @@ layout: Website.CoffeeLayout
 title: "Ethiopia Suke Werekata"
 categories: coffee
 roaster: "PERC Coffee"
-rating: 2
+rating: 4
 date: 2026-02-27
 link: https://perccoffee.com/products/ethiopia-suke-werekata
 permalink: /coffee/ethiopia-suke-werekata

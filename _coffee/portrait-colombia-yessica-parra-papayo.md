@@ -3,7 +3,7 @@ layout: Website.CoffeeLayout
 title: "Colombia Yessica Parra Papayo"
 categories: coffee
 roaster: "Portrait"
-rating: 2
+rating: 3
 date: 2026-06-01
 link: https://www.drinktrade.com/products/colombia-yessica-parra-papayo-washed
 permalink: /coffee/portrait-colombia-yessica-parra-papayo

@@ -4,7 +4,7 @@ title: "To Be Taught, If Fortunate"
 categories: media
 type: book
 creator: "Becky Chambers"
-rating: 4
+rating: 5
 date: 2026-03-31
 year: 2019
 permalink: /media/to-be-taught-if-fortunate

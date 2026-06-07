@@ -4,7 +4,7 @@ title: "Hades 2"
 categories: media
 type: game
 creator: "Supergiant Games"
-rating: 5
+rating: 6
 date: 2026-03-14
 year: 2025
 permalink: /media/hades2

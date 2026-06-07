@@ -3,7 +3,7 @@ layout: Website.CoffeeLayout
 title: "Darrrk"
 categories: coffee
 roaster: "PERC Coffee"
-rating: 4
+rating: 5
 date: 2026-06-05
 link: https://perccoffee.com/products/darrrk
 permalink: /coffee/perc-darrrk

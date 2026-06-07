@@ -1,8 +1,7 @@
 defmodule Website.CoffeeLayout do
   use Tableau.Layout, layout: Website.RootLayout
   use Phoenix.Component
-
-  defp stars(n), do: String.duplicate("★", n) <> String.duplicate("☆", 5 - n)
+  import Website.Component
 
   def template(assigns) do
     ~H"""
@@ -34,12 +33,7 @@ defmodule Website.CoffeeLayout do
 
       <div class="prose text-base">
         <%= {:safe, render(@inner_content)} %>
-        <span
-          class="text-accent font-mono text-lg tracking-wider"
-          aria-label={"#{@page[:rating]} out of 5 stars"}
-        >
-          <%= stars(@page[:rating] || 0) %>
-        </span>
+        <.rating_display rating={@page[:rating] || 0} />
         <div class="mt-3">
           <div data-peepmetrics-cheers></div>
           <script src="https://peepmetrics.com/cheers.js" data-token="izRiEhBmlc9R0YIFUHqa9" async>

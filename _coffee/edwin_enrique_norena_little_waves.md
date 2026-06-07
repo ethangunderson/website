@@ -3,7 +3,7 @@ layout: Website.CoffeeLayout
 title: "Edwin Enrique Noreña - Smoothie"
 categories: coffee
 roaster: "Little Waves"
-rating: 5
+rating: 6
 date: 2026-03-24
 link: https://www.drinktrade.com/products/edwin-enrique-norena-smoothie
 permalink: /coffee/little-waves-smoothie

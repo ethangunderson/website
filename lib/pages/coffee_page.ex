@@ -9,6 +9,12 @@ defmodule Website.CoffeePage do
   def template(assigns) do
     ~H"""
     <section class="space-y-8 not-prose">
+      <div class="flex items-center gap-3 mb-2">
+        <span class="text-[0.72rem] font-bold uppercase tracking-[0.09em] text-muted">View:</span>
+        <a href="/coffee" class="text-[0.72rem] font-bold uppercase tracking-[0.09em] border-b-2 border-ink no-underline text-ink">Reviews</a>
+        <a href="/coffee/stats" class="text-[0.72rem] font-bold uppercase tracking-[0.09em] border-b-2 border-transparent no-underline text-ink hover:border-accent hover:text-accent">Stats</a>
+      </div>
+
       <% coffee_posts =
         @posts |> Enum.filter(&(&1[:categories] == "coffee")) |> Enum.sort_by(& &1.date, {:desc, Date}) %>
       <% posts_by_year = Enum.group_by(coffee_posts, & &1.date.year) %>
@@ -27,7 +33,7 @@ defmodule Website.CoffeePage do
           <span class="text-sm font-heading text-muted w-16">Rating</span>
           <button class="filter-btn px-3 py-1 text-sm border border-ink" data-filter-type="rating" data-filter-value="all" data-active="true">All</button>
           <%= for rating <- ratings do %>
-            <button class="filter-btn px-3 py-1 text-sm border border-ink" data-filter-type="rating" data-filter-value={rating} data-active="false"><%= String.duplicate("★", rating) %></button>
+            <button class="filter-btn px-3 py-1 text-sm border border-ink" data-filter-type="rating" data-filter-value={rating} data-active="false">★ <%= rating %></button>
           <% end %>
         </div>
       </div>

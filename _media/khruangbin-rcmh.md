@@ -4,7 +4,7 @@ title: "Khruangbin Live at Radio City Music Hall: New York Edition"
 categories: media
 type: album
 creator: "Khruangbin"
-rating: 5
+rating: 6
 date: 2026-03-18
 year: 2023
 permalink: /media/khruangbin-rcmh

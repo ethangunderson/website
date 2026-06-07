@@ -3,7 +3,7 @@ layout: Website.CoffeeLayout
 title: "Colombia Diego Bermudez Castillo M-03"
 categories: coffee
 roaster: "PERC Coffee"
-rating: 4
+rating: 5
 date: 2026-02-13
 link: https://perccoffee.com/products/colombia-diego-bermudez-castillo-m-03
 permalink: /coffee/perc-colombia-diego-bermudez-castillo

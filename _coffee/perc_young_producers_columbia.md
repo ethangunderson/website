@@ -3,7 +3,7 @@ layout: Website.CoffeeLayout
 title: "Colombia Young Producers"
 categories: coffee
 roaster: "PERC Coffee"
-rating: 4
+rating: 5
 date: 2026-03-24
 link: https://perccoffee.com/products/colombia-young-producers?variant=52001871036730
 permalink: /coffee/perc-young-producers-columbia

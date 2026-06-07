@@ -3,7 +3,7 @@ layout: Website.CoffeeLayout
 title: "Colombia Jose Uribe Lasso"
 categories: coffee
 roaster: "Ruby Coffee Roasters"
-rating: 3
+rating: 4
 date: 2026-05-15
 link: https://rubycoffeeroasters.com/collections/coffee/products/colombia-jose-uribe-lasso
 permalink: /coffee/ruby-coffee-roasters-colombia-jose-uribe-lasso

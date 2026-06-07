@@ -1,6 +1,24 @@
 defmodule Website.Component do
   use Phoenix.Component
 
+  def rating_display(assigns) do
+    ~H"""
+    <span class="relative inline-flex items-baseline gap-1 group not-prose">
+      <span class="text-accent font-mono text-lg tracking-wider" aria-label={"#{@rating} out of 7"}><%= String.duplicate("★", @rating) <> String.duplicate("☆", 7 - @rating) %></span>
+      <span class="text-muted text-xs cursor-default select-none leading-none self-center">ⓘ</span>
+      <div class="hidden group-hover:block absolute bottom-full left-0 mb-2 w-56 bg-ink text-site-bg text-xs p-3 space-y-1 z-10 pointer-events-none">
+        <div><strong>7</strong> — Perfect, must try, life-changing</div>
+        <div><strong>6</strong> — Excellent, worth repeating. Go out of your way.</div>
+        <div><strong>5</strong> — Good, don't go out of your way, but enjoyable.</div>
+        <div><strong>4</strong> — Passable, works in a pinch</div>
+        <div><strong>3</strong> — Bad, don't do this if you can</div>
+        <div><strong>2</strong> — Atrocious, actively avoid</div>
+        <div><strong>1</strong> — Evil, life-changing in a bad way</div>
+      </div>
+    </span>
+    """
+  end
+
   def project_card(assigns) do
     ~H"""
     <div class={[

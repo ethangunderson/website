@@ -19,7 +19,7 @@ defmodule Website.AboutPage do
         with twenty years of experience building software. I care about performance, observability, and shipping things that people find useful.
       </p>
       <p>
-        I'm currently writing a book on instrumenting Elixir applications. Before that, I started
+        I'm currently writing <a href="/book">a book on instrumenting Elixir applications</a>. Before that, I started
         <a href="https://github.com/chicagodb/chicagodb.github.com">ChicagoDB</a>
         and <a href="https://paperswelove.org/chapter/chicago/">Papers We Love Chicago</a>, hosted <a href="https://podcasts.apple.com/be/podcast/growing-software/id1566244538">a podcast</a>, and built a bunch of things that taught me a lot.
       </p>
@@ -64,7 +64,7 @@ defmodule Website.AboutPage do
                 <span class="text-grille"> — <%= context %></span>
               <% end %>
               <%= if post[:rating] do %>
-                <span class="text-grille text-xs ml-1"><%= String.duplicate("★", post[:rating]) %></span>
+                <span class="text-accent text-xs ml-1"><%= String.duplicate("★", post[:rating]) %></span>
               <% end %>
             </span>
           </li>

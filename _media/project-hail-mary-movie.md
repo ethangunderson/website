@@ -4,7 +4,7 @@ title: "Project Hail Mary"
 categories: media
 type: movie
 creator: "Andy Weir"
-rating: 5
+rating: 6
 date: 2026-03-29
 year: 2026
 permalink: /media/project-hail-mary-movie

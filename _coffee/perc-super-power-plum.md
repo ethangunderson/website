@@ -3,7 +3,7 @@ layout: Website.CoffeeLayout
 title: "Super Power Plum"
 categories: coffee
 roaster: "PERC Coffee"
-rating: 3
+rating: 4
 date: 2026-05-15
 link: https://perccoffee.com/products/super-power-plum
 permalink: /coffee/perc-super-power-plum
