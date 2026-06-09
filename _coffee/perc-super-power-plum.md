@@ -13,4 +13,4 @@ region: Colombia
 roast_level: Light-Medium
 ---
 
-I really wanted to like this coffee, but at the end of the day it was pretty mediocre. Not bad, not great, at times a hint of that plumb action inferred by the name, but those moments were fleeting for me.
+I really wanted to like this coffee, but I found it pretty mediocre. Not bad, not great, at times a hint of that plumb action inferred by the name, but those moments were fleeting for me.

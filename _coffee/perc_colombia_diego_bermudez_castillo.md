@@ -13,4 +13,4 @@ region: Colombia
 roast_level: Medium
 ---
 
-I normally stay in the fruit forward to funky end of the spectrum when it comes to coffee, so this medium roast, spice forward roast, was a bit out of the norm. I originally picked it up because I figured it would be a good coffee to break in my Flair espresso machine. I was right about that, but it also makes a nice cup of filtered coffee. Sweet with a lot of cinnamon spice. Very comforting first cup of morning coffee.
+I normally stay in the fruit forward to funky end of the spectrum when it comes to coffee, so this medium roast, spice forward roast, was a bit out of the norm. I originally picked it up because I figured it would be a good coffee to break in my Flair espresso machine. I was right about that, but it also makes a nice cup of filtered coffee. Sweet with a lot of cinnamon spice. Comforting first cup of morning coffee.

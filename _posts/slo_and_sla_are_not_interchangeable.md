@@ -26,7 +26,7 @@ In contrast, SLOs are **goals**. While an SLI represents the current reality of 
 
 SLAs are not mutable. At least, not without a lot of paperwork and lawyers. They are set in stone. They are what you are legally bound to uphold.
 
-An SLA violation should be a significant event (and hopefully a rare event). However, mislabeling SLOs as SLAs will trivialize SLA violations, while mistaking SLAs for SLOs will lead to treating flexible goals as immutable contracts, ultimately undermining their intended value.
+An SLA violation should be a significant event (and a rare one). However, mislabeling SLOs as SLAs will trivialize SLA violations, while mistaking SLAs for SLOs will lead to treating flexible goals as immutable contracts, ultimately undermining their intended value.
 
 #### In Summary
 

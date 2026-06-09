@@ -28,3 +28,6 @@ tableau_new-*.tar
 /_site/
 
 .serena/
+
+.vale/styles/*
+!.vale/styles/config

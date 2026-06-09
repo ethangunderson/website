@@ -10,7 +10,7 @@ tags:
   - frontend
 ---
 
-A sparkline is a small, simple chart that can be used to show trend information at a glance. There are normally no axes or tooltips, just a small line of data points. While building Glean, I wanted a quick way to show the user how their accounts are performing over time. Sparklines were perfect for this use case.
+A sparkline is a small, simple chart used to show trend information at a glance. Sparklines don't have axes or tooltips, just a small line of data points. While building Glean, I wanted a quick way to show the user how their accounts are performing over time. Sparklines were perfect for this use case.
 
 While Chart.js doesn’t have a first class sparkline chart option, the configurability of line charts still makes this possible without including any other libraries or plugins.
 

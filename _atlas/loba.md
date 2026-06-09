@@ -1,5 +1,3 @@
-Loba Pastry + Coffee
-
 ---
 city: chicago
 city_name: Chicago
