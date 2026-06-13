@@ -9,7 +9,7 @@ defmodule Website.CoffeeLayout do
       <div class="not-prose flex flex-col gap-y-2 min-w-[250px] max-w-[250px]">
         <img
           src={@page[:image]}
-          alt={"Cover image for #{@page[:name]}"}
+          alt={"Cover image for #{@page[:title]}"}
           class={"object-cover border-2 border-ink block #{if @page[:type] == "album", do: "aspect-square", else: "aspect-[2/3]"}"}
         />
         <div class="gap-x-2 items-center">

@@ -10,7 +10,7 @@ permalink: /coffee/dcds-ethiopia-supernatural
 image: /images/coffee/DRI_Supernatural_Main.webp
 process: Natural/Dry Processed
 region: Ethiopia
-roast_level: Light-Medium
+roast_level: Medium-Light
 ---
 
 My love hate relationship with Trade continues. On paper I should love this coffee, but I'm not getting anything out of it.

@@ -1,11 +1,76 @@
 defmodule Website.RootLayout do
   use Tableau.Layout
   use Phoenix.Component
+  import Website.Component
 
   defp active_class(page, href) do
     if (page[:permalink] || "") == href,
       do: "border-accent text-accent",
       else: "border-transparent"
+  end
+
+  defp person_schema do
+    Jason.encode!(%{
+      "@context" => "https://schema.org",
+      "@type" => "Person",
+      "name" => "Ethan Gunderson",
+      "url" => "https://www.ethangunderson.com",
+      "sameAs" => [
+        "https://github.com/ethangunderson",
+        "https://www.linkedin.com/in/ethangunderson/",
+        "https://bsky.app/profile/ethangunderson.com"
+      ]
+    })
+  end
+
+  defp article_schema(page) do
+    Jason.encode!(%{
+      "@context" => "https://schema.org",
+      "@type" => "BlogPosting",
+      "headline" => page[:title],
+      "author" => %{
+        "@type" => "Person",
+        "name" => "Ethan Gunderson",
+        "url" => "https://www.ethangunderson.com"
+      },
+      "datePublished" => page[:date] && Date.to_iso8601(page.date),
+      "url" => "https://www.ethangunderson.com#{page[:permalink]}",
+      "description" => page[:description]
+    })
+  end
+
+  defp review_schema(page) do
+    Jason.encode!(%{
+      "@context" => "https://schema.org",
+      "@type" => "Review",
+      "name" => page[:title],
+      "author" => %{
+        "@type" => "Person",
+        "name" => "Ethan Gunderson",
+        "url" => "https://www.ethangunderson.com"
+      },
+      "datePublished" => page[:date] && Date.to_iso8601(page.date),
+      "url" => "https://www.ethangunderson.com#{page[:permalink]}",
+      "reviewRating" => %{
+        "@type" => "Rating",
+        "ratingValue" => page[:rating],
+        "bestRating" => 7,
+        "worstRating" => 1
+      },
+      "itemReviewed" => %{
+        "@type" => "Product",
+        "name" => page[:title],
+        "brand" => %{"@type" => "Brand", "name" => page[:roaster]},
+        "description" =>
+          [
+            page[:region] && "Region: #{page[:region]}",
+            page[:process] && "Process: #{page[:process]}",
+            page[:roast_level] && "Roast level: #{page[:roast_level]}"
+          ]
+          |> Enum.reject(&is_nil/1)
+          |> Enum.join(". ")
+      }
+    })
   end
 
   def template(assigns) do
@@ -19,9 +84,11 @@ defmodule Website.RootLayout do
 
         <meta property="og:title" content={@page[:og_title] || @page[:title] || "Ethan Gunderson"} />
         <meta property="og:site_name" content="Ethan Gunderson" />
-        <meta property="og:type" content={if @page[:date], do: "article", else: "website"} />
-        <%= if @page[:image] do %>
-          <meta property="og:image" content={@page[:image]} />
+        <meta property="og:type" content={if @page[:categories] in ["post", "coffee", "media"], do: "article", else: "website"} />
+        <meta property="og:image" content={URI.merge(@site[:config].url, @page[:image] || "/images/og-default.png")} />
+        <%= if @page[:categories] in ["post", "coffee"] && @page[:date] do %>
+          <meta property="article:published_time" content={Date.to_iso8601(@page.date)} />
+          <meta property="article:author" content="Ethan Gunderson" />
         <% end %>
         <meta
           property="og:description"
@@ -38,7 +105,21 @@ defmodule Website.RootLayout do
           }
         />
         <meta property="og:url" content={URI.merge(@site[:config].url, @page[:permalink])} />
-        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:card" content={if @page[:image], do: "summary_large_image", else: "summary"} />
+
+        <script type="application/ld+json">
+          <%= Phoenix.HTML.raw(person_schema()) %>
+        </script>
+        <%= if @page[:categories] == "post" do %>
+          <script type="application/ld+json">
+            <%= Phoenix.HTML.raw(article_schema(@page)) %>
+          </script>
+        <% end %>
+        <%= if @page[:categories] == "coffee" do %>
+          <script type="application/ld+json">
+            <%= Phoenix.HTML.raw(review_schema(@page)) %>
+          </script>
+        <% end %>
 
         <title>
           <%= if @page[:title] == "Ethan Gunderson" do %>
@@ -74,12 +155,7 @@ defmodule Website.RootLayout do
           <aside class="bg-sidebar-bg border-b-4 border-ink md:border-b-0 md:border-r-4 md:sticky md:top-1 md:h-[calc(100vh-4px)] p-6 md:p-10 flex flex-col overflow-y-auto">
             <div class="mb-8">
               <a href="/" class="no-underline hover:no-underline text-ink hover:text-ink block">
-                <p class="text-2xl font-extrabold uppercase leading-[1.05] tracking-tight mb-2">
-                  Ethan<br />Gunderson
-                </p>
-                <p class="text-[0.72rem] text-muted uppercase tracking-wider leading-snug">
-                  Software Engineer.<br />Author. Builder.
-                </p>
+                <.site_header />
               </a>
             </div>
 
@@ -195,9 +271,12 @@ defmodule Website.RootLayout do
               <% end %>
 
               <%= if @page[:date] do %>
-                <time class="block text-[0.75rem] text-muted font-semibold uppercase tracking-[0.07em] mb-8">
+                <time class={"block text-[0.75rem] text-muted font-semibold uppercase tracking-[0.07em] #{if @page[:categories] == "post", do: "mb-1", else: "mb-8"}"}>
                   <%= @page.date |> Calendar.strftime("%b %d %Y") %>
                 </time>
+              <% end %>
+              <%= if @page[:categories] == "post" do %>
+                <p class="text-[0.75rem] text-muted font-semibold uppercase tracking-[0.07em] mb-8">Ethan Gunderson</p>
               <% end %>
 
               <div class="prose text-base">

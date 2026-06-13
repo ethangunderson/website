@@ -1,0 +1,62 @@
+# Ethan Gunderson — ethangunderson.com
+
+## About
+
+Ethan Gunderson is a principal software engineer at Cars Commerce with twenty years of experience building software. He specializes in observability, performance engineering, and Elixir/Erlang systems. He is writing a book on instrumenting Elixir applications with Telemetry. He founded ChicagoDB and Papers We Love Chicago, hosted the Growing Software podcast, and has spoken at Elixir conferences.
+
+Off the clock he is a dad to two boys, an avid cook, a BJJ white belt, and an enthusiast of specialty coffee, stationery, and well-made objects.
+
+## Content Areas
+
+### Technical Writing (/notes)
+
+Posts on observability, SLOs, SLAs, Elixir, Telemetry, software engineering practices, and conference talks. Representative topics:
+- The difference between SLOs and SLAs (and why it matters in production systems)
+- Telemetry-powered observability in Elixir applications
+- Software engineering career and craft
+
+### Specialty Coffee Reviews (/coffee)
+
+Ethan reviews single-origin specialty coffees from independent roasters with a 1–7 rating scale. Each review includes: roaster, origin region, processing method, roast level, brew notes, and a numeric rating. The rating scale is documented at /my-rating-system.
+
+**Rating Scale (1–7):**
+- 7: Perfect, must try, life-changing
+- 6: Excellent, worth repeating — go out of your way
+- 5: Good, enjoyable
+- 4: Passable — fine but wouldn't repurchase
+- 3: Bad — avoid if you can
+- 2: Atrocious — actively repulsive
+- 1: Evil — life-changing in a bad way
+
+Roasters reviewed include: PERC Coffee, The Roasted Record, Drink Coffee Do Stuff, Portrait Coffee, Ruby Coffee Roasters, and others.
+
+### Now (/now)
+
+What Ethan is currently reading, building, and thinking about.
+
+### Atlas (/atlas)
+
+Personal travel notes and cities visited.
+
+### Projects (/projects)
+
+Notable software projects and community work.
+
+## Contact
+
+- Email: ethan@ethangunderson.com
+- Bluesky: https://bsky.app/profile/ethangunderson.com
+- GitHub: https://github.com/ethangunderson
+- LinkedIn: https://www.linkedin.com/in/ethangunderson/
+
+## Key Pages
+
+- / — Homepage and about
+- /notes — Technical writing archive
+- /coffee — Specialty coffee review index
+- /coffee/stats — Aggregated coffee statistics
+- /my-rating-system — How the 1–7 rating scale works
+- /now — Current focus and interests
+- /projects — Software projects
+- /atlas — Travel notes
+- /feed.xml — RSS feed (all content)

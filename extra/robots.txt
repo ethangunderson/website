@@ -1,0 +1,30 @@
+User-agent: *
+Allow: /
+
+# AI search and citation bots — explicitly welcome
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Training-only crawlers — blocked (we want citation, not training data scraping)
+User-agent: CCBot
+Disallow: /
+
+Sitemap: https://www.ethangunderson.com/sitemap.xml

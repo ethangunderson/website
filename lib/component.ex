@@ -1,6 +1,16 @@
 defmodule Website.Component do
   use Phoenix.Component
 
+  attr :name_class, :string, default: "text-2xl font-extrabold uppercase leading-[1.05] tracking-tight mb-2"
+  attr :subtitle_class, :string, default: "text-[0.72rem] text-muted uppercase tracking-wider leading-snug"
+
+  def site_header(assigns) do
+    ~H"""
+    <p class={@name_class}>Ethan<br />Gunderson</p>
+    <p class={@subtitle_class}>Software Engineer.<br />Author. Builder.</p>
+    """
+  end
+
   def rating_display(assigns) do
     ~H"""
     <span class="relative inline-flex items-baseline gap-1 group not-prose">

@@ -13,7 +13,7 @@ I started with 1-5 ratings, but that felt too restrictive, and 1-10 feels too te
 
 * 7 — Perfect, must try, life-changing.
 * 6 — Excellent, worth repeating. Go out of your way.
-* 5 — Good, don’t go out of your way, but enjoyable.
+* 5 — Good, enjoyable.
 * 4 — Passable, it's fine. I wouldn't repeat/repurchase it.
 * 3 — Bad, don’t do this if you can.
 * 2 — Atrocious, actively avoid, repulsive.

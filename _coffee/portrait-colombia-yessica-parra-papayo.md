@@ -10,7 +10,7 @@ permalink: /coffee/portrait-colombia-yessica-parra-papayo
 image: /images/coffee/Yessica-Papayo.webp
 process: Washed
 region: Colombia
-roast_level: Light-Medium
+roast_level: Medium-Light
 ---
 
 Another one of Trade's secret drop coffees. Described as funky and fruity, which is true if you let the cup cool a bit, but I'm having a hard time getting much from this bag.

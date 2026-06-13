@@ -39,7 +39,7 @@ Set `link` to the product page URL Ethan provided.
 
 Present a summary of everything you found, clearly flagging any fields you couldn't determine. Ask Ethan to confirm or correct each value, including producer, variety, and price if they weren't on the page. Also collect:
 
-- `rating` — 1 to 5 (always ask; this is subjective)
+- `rating` — 1 to 7 (always ask; this is subjective)
 - `date` — default to today's date in YYYY-MM-DD format, but let Ethan override
 
 ## Step 4 — Ask for prose
