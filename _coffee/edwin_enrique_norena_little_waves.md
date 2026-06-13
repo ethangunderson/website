@@ -11,6 +11,7 @@ image: /images/coffee/smoothie.jpeg
 process: Co-ferment with hops and watermelon
 region: Colombia
 roast_level: Light
+highlight: true
 ---
 
 This coffee was full of funk and banana. Easily my favorite cup of 2026 so far.

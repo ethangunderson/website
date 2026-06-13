@@ -122,7 +122,10 @@ defmodule Website.CoffeeStatsPage do
     <% total = length(coffee_posts) %>
 
     <div class="flex items-center gap-3 mb-8 not-prose">
-      <a href="/coffee" class="text-[0.72rem] font-bold uppercase tracking-[0.09em] border-b-2 border-transparent no-underline text-ink hover:border-accent hover:text-accent">← All Reviews</a>
+      <span class="text-[0.72rem] font-bold uppercase tracking-[0.09em] text-muted">View:</span>
+      <a href="/coffee" class="text-[0.72rem] font-bold uppercase tracking-[0.09em] border-b-2 border-transparent no-underline text-ink hover:border-accent hover:text-accent">Log</a>
+      <a href="/coffee/grid" class="text-[0.72rem] font-bold uppercase tracking-[0.09em] border-b-2 border-transparent no-underline text-ink hover:border-accent hover:text-accent">Grid</a>
+      <a href="/coffee/stats" class="text-[0.72rem] font-bold uppercase tracking-[0.09em] border-b-2 border-ink no-underline text-ink">Stats</a>
     </div>
 
     <section class="space-y-12 not-prose">
