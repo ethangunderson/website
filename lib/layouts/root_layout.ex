@@ -85,7 +85,13 @@ defmodule Website.RootLayout do
         <meta property="og:title" content={@page[:og_title] || @page[:title] || "Ethan Gunderson"} />
         <meta property="og:site_name" content="Ethan Gunderson" />
         <meta property="og:type" content={if @page[:categories] in ["post", "coffee", "media"], do: "article", else: "website"} />
-        <meta property="og:image" content={URI.merge(@site[:config].url, @page[:image] || "/images/og-default.png")} />
+        <% og_image = if @page[:categories] == "coffee" do
+          slug = (@page[:permalink] || "") |> String.replace_prefix("/coffee/", "")
+          "/images/og/coffee/#{slug}.png"
+        else
+          @page[:image] || "/images/og-default.png"
+        end %>
+        <meta property="og:image" content={URI.merge(@site[:config].url, og_image)} />
         <%= if @page[:categories] in ["post", "coffee"] && @page[:date] do %>
           <meta property="article:published_time" content={Date.to_iso8601(@page.date)} />
           <meta property="article:author" content="Ethan Gunderson" />
