@@ -22,7 +22,7 @@ defmodule Website.MixProject do
 
   def aliases() do
     [
-      build: ["tableau.build", "tailwind default --minify", "cmd scripts/gen_og_image.sh"]
+      build: ["tableau.build", "tailwind default --minify"]
     ]
   end
 

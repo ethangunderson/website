@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+HOOK_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_ROOT="$(cd "$HOOK_DIR/.." && pwd)"
+
+# Rebuild the OG image if the site header component changed
+if git diff --cached --name-only | grep -q "lib/component.ex\|lib/layouts/og_image_layout.ex"; then
+  echo "site_header changed — regenerating OG image..."
+  "$PROJECT_ROOT/scripts/gen_og_image.sh"
+  git add "$PROJECT_ROOT/extra/images/og-default.png"
+  echo "OG image updated and staged."
+fi
