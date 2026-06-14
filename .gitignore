@@ -31,3 +31,5 @@ tableau_new-*.tar
 
 .vale/styles/*
 !.vale/styles/config
+
+.claude/worktrees/

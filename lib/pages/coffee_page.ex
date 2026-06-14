@@ -56,7 +56,7 @@ defmodule Website.CoffeePage do
           <div>
             <%= for post <- year_posts do %>
               <%= if post[:rating] == 7 || post[:highlight] do %>
-                <article class="border-l-4 border-l-accent pl-4 py-4 border-b border-b-ink/20" data-roaster={post[:roaster]} data-rating={post[:rating]}>
+                <article class="border-l-4 border-l-accent pl-4 py-4 border-b border-b-ink/20 hover:bg-ink/5" data-roaster={post[:roaster]} data-rating={post[:rating]}>
                   <a href={post.permalink} class="no-underline flex items-start gap-4">
                     <%= if post[:image] do %>
                       <img
