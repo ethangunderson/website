@@ -1,0 +1,17 @@
+sections:
+  - title: Where
+    body: 'Apple Valley, MN. Mostly home or in some coffee shop/book store. See <a href="/atlas" class="underline hover:text-accent transition-colors duration-75">the atlas</a>.'
+  - title: Work
+    body: 'Principal software engineer at <a href="https://cars.com" class="underline hover:text-accent transition-colors duration-75">Cars Commerce</a>. Writing <a href="https://www.instrumentingelixir.com/" class="underline hover:text-accent transition-colors duration-75">Instrumenting Elixir Applications</a>. Rebooting writing after a long break.'
+  - title: Personal
+    body: 'Dad to two boys. Learning to run and training for a marathon. Restarting my garden after moving a couple of years ago.'
+  - title: Reading
+    body: 'Planet Money: A Guide to the Economic Forces That Shape Your Life — Alex Mayyasi'
+
+open_questions:
+  - heading: Starting a new podcast
+    body: I miss recording. Looking for a format and a co-host. Email me if you have a wild idea.
+  - heading: Solofounding a dev-tool startup
+    body: A few ideas in the notebook, started on some of them, but nothing committed. Mostly thinking about distribution and pricing.
+  - heading: Buying a business
+    body: Over the last few months I've been searching for a business to buy. Maybe something local to go all in on. Maybe something smaller to run on the side. I don't really know yet.
