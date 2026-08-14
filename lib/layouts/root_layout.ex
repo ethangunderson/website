@@ -260,6 +260,17 @@ defmodule Website.RootLayout do
                     Atlas
                   </a>
                 </li>
+                <li>
+                  <a
+                    href="/friends"
+                    class={[
+                      "block py-2 px-3 text-[0.78rem] font-bold uppercase tracking-[0.09em] text-ink no-underline border-l-4 transition-colors duration-75 hover:border-accent hover:text-accent",
+                      active_class(@page, "/friends")
+                    ]}
+                  >
+                    Friends
+                  </a>
+                </li>
               </ul>
             </nav>
           </aside>
