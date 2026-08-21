@@ -59,3 +59,11 @@
   opacity: 1;
   transition-delay: 1s;
 }
+
+@layer components {
+  /* Reading measure for long-form bodies. Global .prose sets max-width:none so
+     that full-width grid/stat pages aren't squeezed; opt back in here. */
+  .prose-measure {
+    @apply max-w-[68ch];
+  }
+}

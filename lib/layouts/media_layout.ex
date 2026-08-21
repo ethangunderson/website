@@ -22,7 +22,7 @@ defmodule Website.MediaLayout do
         </div>
       </div>
 
-      <div class="prose text-base">
+      <div class="prose prose-measure text-base">
         <%= {:safe, render(@inner_content)} %>
         <.rating_display rating={@page[:rating] || 0} />
         <div class="mt-3">

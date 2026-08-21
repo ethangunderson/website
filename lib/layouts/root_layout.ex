@@ -296,7 +296,7 @@ defmodule Website.RootLayout do
                 <p class="text-[0.75rem] text-muted font-semibold uppercase tracking-[0.07em] mb-8">Ethan Gunderson</p>
               <% end %>
 
-              <div class="prose text-base">
+              <div class={"prose text-base #{if @page[:categories] == "post", do: "prose-measure"}"}>
                 <%= render(@inner_content) %>
               </div>
             </main>
