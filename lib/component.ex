@@ -57,4 +57,34 @@ defmodule Website.Component do
     </div>
     """
   end
+
+  attr :recipes, :list, default: []
+
+  def brew_recipes(assigns) do
+    ~H"""
+    <%= if @recipes != [] do %>
+      <h2>Brewing Recipes</h2>
+      <%= for recipe <- @recipes do %>
+        <h3><%= Website.BrewRecipe.label(recipe) %></h3>
+        <p><%= Enum.join(Website.BrewRecipe.spec_parts(recipe), " · ") %></p>
+        <table>
+          <thead>
+            <tr>
+              <th>Stage</th>
+              <th :if={Website.BrewRecipe.has_water?(recipe)}>Water (total)</th>
+              <th>Time</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr :for={step <- recipe[:steps] || []}>
+              <td><%= step[:stage] %></td>
+              <td :if={Website.BrewRecipe.has_water?(recipe)}><%= step[:water_g] && "#{step[:water_g]}g" %></td>
+              <td><%= step[:time] %></td>
+            </tr>
+          </tbody>
+        </table>
+      <% end %>
+    <% end %>
+    """
+  end
 end

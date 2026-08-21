@@ -104,35 +104,37 @@ image: /images/coffee/{image_filename}
 process: {process}
 region: {region}
 roast_level: {roast_level}
+recipes:
+  - method: V60
+    kind: filter
+    dose_g: 30
+    yield_g: 500
+    temp_f: 210
+    grinder: DF54
+    grind: 70
+    steps:
+      - { stage: Bloom, water_g: 60, time: "0:30" }
+      - { stage: Second bloom, water_g: 100, time: "0:30" }
+      - { stage: Single pour, water_g: 500, time: "1:30" }
 description: "[DESCRIPTION NEEDED]"
 ---
 
 {prose}
-
-## Brewing Recipes
-
-### Filter — V60
-
-30g in / 500g out (1:16.7) · 210°F · DF54 at 70 · ~2:30 total
-
-| Stage | Water (total) | Time |
-| --- | --- | --- |
-| Bloom | 60g | 0:30 |
-| Second bloom | 100g | 0:30 |
-| Single pour | 500g | ~1:30 |
 ```
 
 `description` is the page's meta description and `og:description`. It is Ethan's copy — always write the `[DESCRIPTION NEEDED]` stub and let him fill it in.
 
 `price` feeds `offers` in the Review JSON-LD (`review_schema/1` in `lib/layouts/root_layout.ex`). Omit the key entirely if the price is unknown; the schema drops nil fields.
 
-Recipe formatting, when Ethan gives you recipes:
+Recipes live in the `recipes:` frontmatter list, never as markdown tables in the body. `Website.Component.brew_recipes/1` renders them, so the heading, spec line, and table markup are not yours to write — only the data. Omit the key entirely when there are no recipes.
 
-- Spec line first (dose / yield / ratio / temp / grind / total time), pour or stage table below it.
-- One `###` sub-heading per brewer, labelled by method — `### Filter — V60`, `### Espresso — Flair 58 Plus 2`. Don't repeat the brewer name in the spec line underneath.
-- Espresso tables carry no water column; the yield is already in the spec line.
+Record only what Ethan states, with numbers as numbers:
 
-**Keep every recipe below a `##` heading.** `review_schema/1` derives the JSON-LD `reviewBody` from the markdown above the first `##`, so a recipe placed before one puts brew tables into the Google search snippet.
+- `dose_g`, `yield_g`, `temp_f`, `grind` are numeric. Ratio and total time are **derived** by `Website.BrewRecipe` — never write them into the frontmatter, or the summary can drift from the numbers above it.
+- `water_g` on each step is **cumulative**, matching how Ethan dictates a pour schedule.
+- `kind` drives the rendered label (`filter` → "Filter — V60") and defaults to the method alone when absent.
+- Espresso steps carry no `water_g`; the component drops the water column when no step has one.
+- Step `time` values are `"M:SS"` strings. A malformed duration raises rather than rendering garbage.
 
 ## Step 8 — Write the Obsidian note
 
@@ -176,7 +178,9 @@ If producer, variety, or price are unknown/blank, omit the wikilink wrapper and 
 cd /Users/ethan/projects/website && mix gen_coffee_og_images
 ```
 
-Without this the page's `og:image` points at a file that does not exist and every share renders blank. The task globs all of `_coffee/*.md`, so it rewrites all existing PNGs in `extra/images/og/coffee/` — expect them to show as modified in `git status`, and tell Ethan that churn is from the regeneration, not from his new review.
+A pre-commit hook already runs this whenever `_coffee/*.md` changes, so the committed state is never stale. Run it by hand anyway to verify the image before Ethan looks at the page — until it runs, `og:image` points at a file that does not exist.
+
+The task globs all of `_coffee/*.md`, so it re-encodes every PNG in `extra/images/og/coffee/` — expect them all to show as modified in `git status`, and tell Ethan that churn is from the regeneration, not from his new review.
 
 Then rebuild and confirm the new PNG is 1200x630 and carries the right title and bag image:
 

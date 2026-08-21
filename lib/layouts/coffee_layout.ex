@@ -33,6 +33,7 @@ defmodule Website.CoffeeLayout do
 
       <div class="prose prose-measure text-base">
         <%= {:safe, render(@inner_content)} %>
+        <.brew_recipes recipes={@page[:recipes] || []} />
         <.rating_display rating={@page[:rating] || 0} />
         <div class="mt-3">
           <div data-peepmetrics-cheers></div>
