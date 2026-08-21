@@ -10,13 +10,8 @@ defmodule Website.OgImageLayout do
       <head>
         <meta charset="utf-8" />
         <meta name="robots" content="noindex, nofollow" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@600;800&display=swap"
-          rel="stylesheet"
-        />
         <style>
+          <%= Phoenix.HTML.raw(Website.OgImage.font_face_css()) %>
           * { margin: 0; padding: 0; box-sizing: border-box; }
           html, body { width: 1200px; height: 630px; overflow: hidden; }
           body {
