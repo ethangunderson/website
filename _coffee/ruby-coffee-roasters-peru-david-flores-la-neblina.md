@@ -11,6 +11,7 @@ image: /images/coffee/Ruby_PeruDavidFloresLaNeblina.webp
 process: Washed
 region: Peru
 roast_level: Light
+description: "Great specs on paper but nothing memorable. Washed, light roast. Rating: 3/7."
 ---
 
 Eh. The specs on this coffee are great, but it's just not memorable to me. Still need to try it on espresso to see if that changes anything.

@@ -11,6 +11,7 @@ image: /images/coffee/PERC_SuperPowerPlum.webp
 process: Adv Washed P-02
 region: Colombia
 roast_level: Medium-Light
+description: "Occasional hints of fruit without much follow-through. PERC Colombia, advanced washed. Rating: 4/7."
 ---
 
 I really wanted to like this coffee, but I found it pretty mediocre. Not bad, not great, at times a hint of that plumb action inferred by the name, but those moments were fleeting for me.

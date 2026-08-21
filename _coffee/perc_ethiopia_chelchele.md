@@ -11,6 +11,7 @@ image: /images/coffee/PERC_EthiopiaChelchele_2025.webp
 process: Anaerobic Natural Process
 region: Ethiopia
 roast_level: Light
+description: "PERC's Ethiopia Chelchele is a blueberry bomb. Anaerobic natural processing from Ethiopia. Rating: 5/7."
 ---
 
 Blueberry bomb

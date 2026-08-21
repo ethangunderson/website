@@ -11,6 +11,7 @@ image: /images/coffee/PERC_ColombiaDiegoBermudez.webp
 process: Thermal Shock Washed Process
 region: Colombia
 roast_level: Medium
+description: "A spice-forward medium roast from PERC. Sweet with loads of cinnamon, excellent for both espresso and filter. Colombia, thermal shock washed. Rating: 5/7."
 ---
 
 I normally stay in the fruit forward to funky end of the spectrum when it comes to coffee, so this medium roast, spice forward roast, was a bit out of the norm. I originally picked it up because I figured it would be a good coffee to break in my Flair espresso machine. I was right about that, but it also makes a nice cup of filtered coffee. Sweet with a lot of cinnamon spice. Comforting first cup of morning coffee.

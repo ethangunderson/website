@@ -11,4 +11,5 @@ image: /images/coffee/the-roasted-record_primer-paso.webp
 process: Natural Anaerobic
 region: Colombia
 roast_level: Medium-Light
+description: ""
 ---

@@ -5,6 +5,7 @@ date: 2026-06-06 09:00:00
 categories: post
 permalink: "/grant-achatz-on-creativity"
 link_url: "https://grantachatz.substack.com/p/alinea-again"
+description: ""
 tags:
   - creativity
   - link

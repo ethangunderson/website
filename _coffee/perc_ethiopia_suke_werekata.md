@@ -11,6 +11,7 @@ image: /images/coffee/PERC_EthiopiaSukeWerekata.webp
 process: 72 Hour Anaerobic Natural
 region: Ethiopia
 roast_level: Light
+description: "I couldn't get much flavor out across multiple v60 attempts. Ethiopia. Rating: 4/7."
 ---
 
 A rare miss from PERC for me. I wasn't able to get much flavor out of this bag at all except a nondescript flavor of just..coffee. Only tried on a v60, but through different brew temps, grind settings, and water profiles, this bag was a miss. Not actively bad, but eh.

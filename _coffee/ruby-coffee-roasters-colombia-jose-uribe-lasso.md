@@ -11,4 +11,5 @@ image: /images/coffee/Ruby_ColombiaJoseUribeLasso.webp
 process: Anaerobic Fermentation Washed
 region: Colombia
 roast_level: Medium-Light
+description: ""
 ---

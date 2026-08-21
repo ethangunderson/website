@@ -40,7 +40,25 @@ defmodule Website.RootLayout do
   end
 
   defp review_schema(page) do
-    Jason.encode!(%{
+    item =
+      %{
+        "@type" => "Product",
+        "name" => page[:title],
+        "brand" => %{"@type" => "Brand", "name" => page[:roaster]},
+        "image" => page[:image] && "https://www.ethangunderson.com#{page[:image]}",
+        "offers" => offer(page),
+        "description" =>
+          [
+            page[:region] && "Region: #{page[:region]}",
+            page[:process] && "Process: #{page[:process]}",
+            page[:roast_level] && "Roast level: #{page[:roast_level]}"
+          ]
+          |> Enum.reject(&is_nil/1)
+          |> Enum.join(". ")
+      }
+      |> reject_nil()
+
+    %{
       "@context" => "https://schema.org",
       "@type" => "Review",
       "name" => page[:title],
@@ -51,27 +69,52 @@ defmodule Website.RootLayout do
       },
       "datePublished" => page[:date] && Date.to_iso8601(page.date),
       "url" => "https://www.ethangunderson.com#{page[:permalink]}",
+      "reviewBody" => review_body(page[:body]),
       "reviewRating" => %{
         "@type" => "Rating",
         "ratingValue" => page[:rating],
         "bestRating" => 7,
         "worstRating" => 1
       },
-      "itemReviewed" => %{
-        "@type" => "Product",
-        "name" => page[:title],
-        "brand" => %{"@type" => "Brand", "name" => page[:roaster]},
-        "description" =>
-          [
-            page[:region] && "Region: #{page[:region]}",
-            page[:process] && "Process: #{page[:process]}",
-            page[:roast_level] && "Roast level: #{page[:roast_level]}"
-          ]
-          |> Enum.reject(&is_nil/1)
-          |> Enum.join(". ")
-      }
-    })
+      "itemReviewed" => item
+    }
+    |> reject_nil()
+    |> Jason.encode!()
   end
+
+  defp offer(page) do
+    if price = page[:price] do
+      %{
+        "@type" => "Offer",
+        "price" => price,
+        "priceCurrency" => "USD",
+        "url" => page[:link],
+        "seller" => %{"@type" => "Organization", "name" => page[:roaster]}
+      }
+      |> reject_nil()
+    end
+  end
+
+  # The review is the prose above the first section heading; everything below it
+  # is structured brew data that would only add noise to a search snippet.
+  defp review_body(nil), do: nil
+
+  defp review_body(body) do
+    body
+    |> String.split(~r/^##\s/m, parts: 2)
+    |> hd()
+    |> String.replace(~r/`([^`]+)`/, "\\1")
+    |> String.replace(~r/\[([^\]]+)\]\([^)]*\)/, "\\1")
+    |> String.replace(~r/[*_]{1,2}([^*_]+)[*_]{1,2}/, "\\1")
+    |> String.replace(~r/\s+/, " ")
+    |> String.trim()
+    |> case do
+      "" -> nil
+      text -> text
+    end
+  end
+
+  defp reject_nil(map), do: Map.reject(map, fn {_, v} -> is_nil(v) end)
 
   def template(assigns) do
     ~H"""
@@ -79,8 +122,9 @@ defmodule Website.RootLayout do
     <html lang="en">
       <head>
         <meta charset="utf-8" />
-        <meta http_equiv="X-UA-Compatible" content="IE=edge" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="canonical" href={URI.merge(@site[:config].url, @page[:permalink])} />
 
         <meta property="og:title" content={@page[:og_title] || @page[:title] || "Ethan Gunderson"} />
         <meta property="og:site_name" content="Ethan Gunderson" />
@@ -111,7 +155,7 @@ defmodule Website.RootLayout do
           }
         />
         <meta property="og:url" content={URI.merge(@site[:config].url, @page[:permalink])} />
-        <meta name="twitter:card" content={if @page[:image], do: "summary_large_image", else: "summary"} />
+        <meta name="twitter:card" content="summary_large_image" />
 
         <script type="application/ld+json">
           <%= Phoenix.HTML.raw(person_schema()) %>

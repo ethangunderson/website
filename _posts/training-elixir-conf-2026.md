@@ -5,6 +5,7 @@ date: 2026-06-14 12:00:00
 categories: post
 permalink: "/training-at-elixirconf-2026"
 event: "ElixirConf 2026"
+description: "Zack and I are returning to ElixirConf 2026 with a full day of Elixir observability training. From Telemetry first principles through OpenTelemetry, tracing, and production dashboards."
 tags:
   - elixir
   - elixirconf

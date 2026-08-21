@@ -4,6 +4,7 @@ title: "My Rating System"
 date: 2026-06-06 18:00:00
 categories: post
 permalink: "/my-rating-system"
+description: "Why I use a 1–7 scale for rating coffee and other things."
 tags:
 ---
 
