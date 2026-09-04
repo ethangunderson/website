@@ -1,6 +1,6 @@
 ---
 layout: Website.PostLayout
-title: "23 Simple Things That Make Me Happy"
+title: "26 Simple Things That Make Me Happy"
 date: 2026-09-04 00:00:00
 categories: post
 permalink: "/simple-things"
