@@ -97,6 +97,8 @@ cwebp -q 82 -resize 600 0 /tmp/{slug}.orig \
 rm /tmp/{slug}.orig
 ```
 
+Check the source width first (`sips -g pixelWidth /tmp/{slug}.orig`). Drop `-resize 600 0` when the source is 600px wide or narrower; cwebp upscales otherwise, which only blurs a small cover.
+
 Then report the file size and pixel dimensions:
 
 ```bash
