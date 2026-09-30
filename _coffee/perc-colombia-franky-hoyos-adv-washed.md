@@ -3,7 +3,7 @@ layout: Website.CoffeeLayout
 title: "Colombia Franky Hoyos Adv Washed"
 categories: coffee
 roaster: "PERC Coffee"
-rating: 6
+rating: 5
 date: 2026-08-23
 link: https://perccoffee.com/products/colombia-franky-hoyos-adv-washed
 price: "34.00"

@@ -3,7 +3,7 @@ layout: Website.CoffeeLayout
 title: "Colombia Franky Hoyos Adv Natural"
 categories: coffee
 roaster: "PERC Coffee"
-rating: 6
+rating: 5
 date: 2026-08-20
 link: https://perccoffee.com/products/colombia-franky-hoyos-adv-natural
 price: "34.00"
